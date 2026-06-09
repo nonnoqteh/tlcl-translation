@@ -8,21 +8,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0d1117;
-      --surface: #161b22;
-      --border: #30363d;
-      --green: #3fb950;
-      --blue: #58a6ff;
-      --purple: #bc8cff;
-      --orange: #ffa657;
-      --red: #f85149;
-      --yellow: #d29922;
-      --text: #e6edf3;
+      --bg:         #0d1117;
+      --surface:    #161b22;
+      --border:     #30363d;
+      --green:      #3fb950;
+      --blue:       #58a6ff;
+      --purple:     #bc8cff;
+      --orange:     #ffa657;
+      --red:        #f85149;
+      --yellow:     #d29922;
+      --text:       #e6edf3;
       --text-muted: #8b949e;
-      --code-bg: #161b22;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background: var(--bg);
@@ -56,17 +55,12 @@
       gap: 6px;
       transition: color .2s;
     }
-
     .topbar a:hover { color: var(--text); }
-
-    .topbar .home-link {
-      color: var(--green);
-      font-weight: 600;
-    }
+    .topbar .home-link { color: var(--green); font-weight: 600; }
 
     .sep { color: var(--border); }
 
-    .topbar .lang-tag {
+    .lang-tag {
       margin-right: auto;
       background: var(--border);
       border-radius: 4px;
@@ -117,10 +111,7 @@
       margin: 28px 0 12px;
     }
 
-    .content p {
-      margin-bottom: 16px;
-      color: var(--text);
-    }
+    .content p { margin-bottom: 16px; }
 
     .content hr {
       border: none;
@@ -130,7 +121,7 @@
 
     /* ── Code ── */
     .content code {
-      background: var(--code-bg);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 4px;
       padding: 2px 6px;
@@ -144,13 +135,13 @@
     .content pre {
       background: #010409;
       border: 1px solid var(--border);
+      border-top: 2px solid var(--green);
       border-radius: 10px;
       padding: 20px 24px;
       overflow-x: auto;
       margin: 16px 0;
       direction: ltr;
       text-align: left;
-      position: relative;
     }
 
     .content pre code {
@@ -160,13 +151,6 @@
       color: var(--text);
       font-size: 14px;
       line-height: 1.7;
-    }
-
-    /* bash blocks get a green top bar */
-    .content pre.language-bash,
-    .content div.language-bash pre,
-    .content .highlight pre {
-      border-top: 2px solid var(--green);
     }
 
     /* ── Tables ── */
@@ -200,14 +184,10 @@
       padding-right: 24px;
       margin-bottom: 16px;
     }
-
-    .content li {
-      margin-bottom: 6px;
-    }
-
+    .content li { margin-bottom: 6px; }
     .content li code { font-size: 13px; }
 
-    /* ── Blockquote (tanbih) ── */
+    /* ── Blockquote ── */
     .content blockquote {
       background: #1a1f2b;
       border-right: 4px solid var(--yellow);
@@ -217,18 +197,54 @@
       color: #d1d5da;
       font-size: 14px;
     }
-
     .content blockquote p { margin: 0; }
 
-    /* ── Strong / em ── */
+    /* ── Inline emphasis ── */
     .content strong { color: var(--orange); font-weight: 700; }
-    .content em { color: var(--purple); font-style: italic; }
-
-    /* ── Links ── */
-    .content a { color: var(--blue); text-decoration: none; }
+    .content em     { color: var(--purple); font-style: italic; }
+    .content a      { color: var(--blue); text-decoration: none; }
     .content a:hover { text-decoration: underline; }
 
-    /* ── Nav footer ── */
+    /* ── Source box ── */
+    .source-box {
+      margin-top: 48px;
+      background: #111820;
+      border: 1px solid var(--border);
+      border-right: 4px solid var(--purple);
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .source-icon { font-size: 32px; flex-shrink: 0; }
+
+    .source-text { flex: 1; }
+    .source-title  { font-size: 13px; color: var(--text-muted); margin-bottom: 4px; }
+    .source-name   { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+    .source-author { font-size: 13px; color: var(--text-muted); }
+
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(188,140,255,.1);
+      border: 1px solid var(--purple);
+      border-radius: 6px;
+      padding: 8px 16px;
+      color: var(--purple);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background .2s;
+    }
+    .source-link:hover { background: rgba(188,140,255,.2); }
+
+    /* ── Chapter nav ── */
     .chapter-nav {
       display: flex;
       justify-content: space-between;
@@ -251,87 +267,21 @@
       color: var(--text-muted);
       text-decoration: none;
       font-size: 14px;
-      transition: all .2s;
+      transition: border-color .2s, color .2s;
     }
-
-    .nav-btn:hover {
-      border-color: var(--green);
-      color: var(--green);
-    }
-
+    .nav-btn:hover,
     .nav-btn.home-btn {
       border-color: var(--green);
       color: var(--green);
     }
 
-    /* ── Source Box ── */
-    .source-box {
-      margin-top: 48px;
-      background: #111820;
-      border: 1px solid var(--border);
-      border-right: 4px solid var(--purple);
-      border-radius: 0 10px 10px 0;
-      padding: 20px 24px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .source-box .source-icon {
-      font-size: 32px;
-      flex-shrink: 0;
-    }
-
-    .source-box .source-text {
-      flex: 1;
-    }
-
-    .source-box .source-title {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-
-    .source-box .source-name {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 2px;
-    }
-
-    .source-box .source-author {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .source-box .source-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(188,140,255,.1);
-      border: 1px solid var(--purple);
-      border-radius: 6px;
-      padding: 8px 16px;
-      color: var(--purple);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      white-space: nowrap;
-      transition: all .2s;
-      flex-shrink: 0;
-    }
-
-    .source-box .source-link:hover {
-      background: rgba(188,140,255,.2);
-    }
-
-    /* scrollbar */
+    /* ── Scrollbar ── */
     ::-webkit-scrollbar { width: 8px; height: 8px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: #484f58; }
 
+    /* ── Responsive ── */
     @media (max-width: 600px) {
       .page-wrap { padding: 24px 16px 60px; }
       .content h1 { font-size: 22px; }
@@ -341,40 +291,39 @@
 </head>
 <body>
 
-  <nav class="topbar">
-    <a class="home-link" href="{{ site.baseurl }}/">🐧 TLCL</a>
-    <span class="sep">›</span>
-    <a href="{{ site.baseurl }}/">خانه</a>
-    {% if page.path contains 'fa/' %}
-    <span class="lang-tag">فارسی</span>
-    {% elsif page.path contains 'ckb/' %}
-    <span class="lang-tag">کوردی سۆرانی</span>
-    {% endif %}
-  </nav>
+<nav class="topbar">
+  <a class="home-link" href="{{ site.baseurl }}/">🐧 TLCL</a>
+  <span class="sep">›</span>
+  <a href="{{ site.baseurl }}/">خانه</a>
+  {% if page.path contains 'fa/' %}
+  <span class="lang-tag">فارسی</span>
+  {% elsif page.path contains 'ckb/' %}
+  <span class="lang-tag">کوردی سۆرانی</span>
+  {% endif %}
+</nav>
 
-  <div class="page-wrap">
-    <article class="content">
-      {{ content }}
-    </article>
+<div class="page-wrap">
+  <article class="content">
+    {{ content }}
+  </article>
 
-    <!-- Source reference -->
-    <div class="source-box">
-      <div class="source-icon">📖</div>
-      <div class="source-text">
-        <div class="source-title">این ترجمه بر اساس منبع اصلی</div>
-        <div class="source-name">The Linux Command Line — 6th Internet Edition</div>
-        <div class="source-author">نوشته‌ی William E. Shotts, Jr. &nbsp;|&nbsp; لایسنس: CC BY-NC-ND 3.0</div>
-      </div>
-      <a class="source-link" href="https://linuxcommand.org/tlcl.php" target="_blank" rel="noopener">
-        📥 دانلود رایگان ↗
-      </a>
+  <div class="source-box">
+    <div class="source-icon">📖</div>
+    <div class="source-text">
+      <div class="source-title">این ترجمه بر اساس منبع اصلی</div>
+      <div class="source-name">The Linux Command Line — 6th Internet Edition</div>
+      <div class="source-author">نوشته‌ی William E. Shotts, Jr. &nbsp;|&nbsp; لایسنس: CC BY-NC-ND 3.0</div>
     </div>
-
-    <div class="chapter-nav">
-      <a class="nav-btn" href="javascript:history.back()">← بازگشت</a>
-      <a class="nav-btn home-btn" href="{{ site.baseurl }}/">🏠 فهرست فصل‌ها</a>
-    </div>
+    <a class="source-link" href="https://linuxcommand.org/tlcl.php" target="_blank" rel="noopener">
+      📥 دانلود رایگان ↗
+    </a>
   </div>
+
+  <div class="chapter-nav">
+    <a class="nav-btn" href="javascript:history.back()">← بازگشت</a>
+    <a class="nav-btn home-btn" href="{{ site.baseurl }}/">🏠 فهرست فصل‌ها</a>
+  </div>
+</div>
 
 </body>
 </html>

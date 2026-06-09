@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -8,20 +8,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0d1117;
-      --surface: #161b22;
-      --border: #30363d;
-      --green: #3fb950;
-      --green-dim: #1a4a27;
-      --blue: #58a6ff;
-      --purple: #bc8cff;
-      --orange: #ffa657;
-      --text: #e6edf3;
+      --bg:         #0d1117;
+      --surface:    #161b22;
+      --border:     #30363d;
+      --green:      #3fb950;
+      --green-dim:  #1a4a27;
+      --blue:       #58a6ff;
+      --purple:     #bc8cff;
+      --orange:     #ffa657;
+      --red:        #f85149;
+      --text:       #e6edf3;
       --text-muted: #8b949e;
-      --red: #f85149;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background: var(--bg);
@@ -30,11 +30,12 @@
       font-size: 16px;
       line-height: 1.7;
       min-height: 100vh;
+      padding-top: 52px;
     }
 
     /* ── Hero ── */
     .hero {
-      background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
+      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 50%, var(--bg) 100%);
       border-bottom: 1px solid var(--border);
       padding: 80px 20px 60px;
       text-align: center;
@@ -70,7 +71,6 @@
       line-height: 1.25;
       margin-bottom: 12px;
     }
-
     .hero h1 span { color: var(--green); }
 
     .hero-sub {
@@ -92,7 +92,6 @@
       background: #010409;
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 0;
       width: min(560px, 90vw);
       text-align: right;
       box-shadow: 0 24px 80px rgba(0,0,0,.5);
@@ -124,9 +123,8 @@
     }
 
     .t-prompt { color: var(--green); }
-    .t-cmd { color: var(--text); }
-    .t-out { color: var(--text-muted); }
-    .t-hi { color: var(--orange); }
+    .t-out    { color: var(--text-muted); }
+    .t-hi     { color: var(--orange); }
     .t-cursor {
       display: inline-block;
       width: 9px; height: 16px;
@@ -136,7 +134,7 @@
     }
     @keyframes blink { 50% { opacity: 0; } }
 
-    /* ── Langs ── */
+    /* ── Lang buttons ── */
     .langs {
       display: flex;
       justify-content: center;
@@ -155,25 +153,15 @@
       font-weight: 600;
       text-decoration: none;
       border: 1px solid;
-      transition: all .2s;
+      transition: background .2s, transform .2s;
       font-family: 'Vazirmatn', sans-serif;
     }
-
-    .lang-btn.fa {
-      background: rgba(88,166,255,.1);
-      border-color: var(--blue);
-      color: var(--blue);
-    }
-    .lang-btn.fa:hover { background: rgba(88,166,255,.2); transform: translateY(-2px); }
-
-    .lang-btn.ckb {
-      background: rgba(188,140,255,.1);
-      border-color: var(--purple);
-      color: var(--purple);
-    }
+    .lang-btn.fa  { background: rgba(88,166,255,.1);  border-color: var(--blue);   color: var(--blue); }
+    .lang-btn.ckb { background: rgba(188,140,255,.1); border-color: var(--purple); color: var(--purple); }
+    .lang-btn.fa:hover  { background: rgba(88,166,255,.2);  transform: translateY(-2px); }
     .lang-btn.ckb:hover { background: rgba(188,140,255,.2); transform: translateY(-2px); }
 
-    /* ── Main ── */
+    /* ── Container ── */
     .container {
       max-width: 1000px;
       margin: 0 auto;
@@ -209,7 +197,7 @@
       margin-top: 4px;
     }
 
-    /* ── Parts ── */
+    /* ── Section title ── */
     .section-title {
       font-size: 22px;
       font-weight: 700;
@@ -221,9 +209,8 @@
       gap: 10px;
     }
 
-    .part {
-      margin-bottom: 48px;
-    }
+    /* ── Parts ── */
+    .part { margin-bottom: 48px; }
 
     .part-header {
       display: flex;
@@ -246,10 +233,7 @@
       font-weight: 700;
     }
 
-    .part-ckb {
-      color: var(--text-muted);
-      font-size: 13px;
-    }
+    .part-ckb { color: var(--text-muted); font-size: 13px; }
 
     .chapters {
       border: 1px solid var(--border);
@@ -258,28 +242,36 @@
       overflow: hidden;
     }
 
+    .col-header,
     .ch-row {
       display: grid;
       grid-template-columns: 40px 1fr 1fr 1fr;
       align-items: center;
+      gap: 12px;
       padding: 12px 20px;
+    }
+
+    .col-header {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      border: 1px solid var(--border);
+      border-top: none;
+      background: var(--bg);
+      padding-block: 8px;
+    }
+
+    .ch-row {
       border-bottom: 1px solid var(--border);
       transition: background .15s;
-      gap: 12px;
     }
     .ch-row:last-child { border-bottom: none; }
     .ch-row:hover { background: var(--surface); }
 
-    .ch-num {
-      color: var(--text-muted);
-      font-size: 13px;
-      text-align: center;
-    }
-
-    .ch-en {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
+    .ch-num { color: var(--text-muted); font-size: 13px; text-align: center; }
+    .ch-en  { font-size: 13px; color: var(--text-muted); }
 
     .ch-link {
       text-decoration: none;
@@ -289,29 +281,13 @@
       gap: 6px;
       transition: color .15s;
     }
-
-    .ch-link.fa { color: var(--blue); }
-    .ch-link.fa:hover { color: #79baff; }
-    .ch-link.ckb { color: var(--purple); }
-    .ch-link.ckb:hover { color: #d0adff; }
+    .ch-link.fa   { color: var(--blue); }
+    .ch-link.fa:hover   { color: #79baff; }
+    .ch-link.ckb  { color: var(--purple); }
+    .ch-link.ckb:hover  { color: #d0adff; }
     .ch-link.soon { color: var(--text-muted); font-size: 12px; pointer-events: none; }
 
-    .col-header {
-      display: grid;
-      grid-template-columns: 40px 1fr 1fr 1fr;
-      gap: 12px;
-      padding: 8px 20px;
-      font-size: 12px;
-      color: var(--text-muted);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: .5px;
-      border: 1px solid var(--border);
-      border-top: none;
-      background: #0d1117;
-    }
-
-    /* ── Search ── */
+    /* ── Search bar ── */
     .search-bar {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -320,7 +296,6 @@
       border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       padding: 0 20px;
       gap: 12px;
       z-index: 200;
@@ -338,7 +313,7 @@
     .search-wrap {
       display: flex;
       align-items: center;
-      background: #0d1117;
+      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 0 12px;
@@ -346,12 +321,7 @@
       width: 260px;
       transition: border-color .2s, width .3s;
     }
-
-    .search-wrap:focus-within {
-      border-color: var(--green);
-      width: 340px;
-    }
-
+    .search-wrap:focus-within { border-color: var(--green); width: 340px; }
     .search-wrap svg { flex-shrink: 0; color: var(--text-muted); }
 
     #search-input {
@@ -366,8 +336,6 @@
       direction: rtl;
     }
 
-    #search-input::placeholder { color: var(--text-muted); }
-
     #search-clear {
       background: none;
       border: none;
@@ -378,7 +346,6 @@
       display: none;
       flex-shrink: 0;
     }
-
     #search-clear:hover { color: var(--text); }
 
     #search-count {
@@ -388,17 +355,72 @@
       margin-right: auto;
     }
 
-    .ch-row.hidden { display: none; }
+    .ch-row.hidden    { display: none; }
     .ch-row.highlight { background: rgba(63,185,80,.07); }
+    .part.all-hidden  { display: none; }
 
-    .part.all-hidden { display: none; }
+    /* ── Bug report ── */
+    .report-section {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 48px 20px;
+    }
 
-    body { padding-top: 52px; }
+    .report-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-    @media (max-width: 600px) {
-      .search-wrap { width: 180px; }
-      .search-wrap:focus-within { width: 220px; }
-      #search-count { display: none; }
+    .report-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--red);
+      border-radius: 12px;
+      padding: 32px 28px;
+    }
+
+    .report-icon { font-size: 32px; margin-bottom: 12px; }
+
+    .report-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .report-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .report-desc-ckb {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .report-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(248,81,73,.1);
+      border: 1px solid var(--red);
+      border-radius: 8px;
+      padding: 12px 28px;
+      color: var(--red);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      transition: background .2s;
+    }
+    .report-btn:hover { background: rgba(248,81,73,.2); }
+
+    .report-email {
+      font-size: 12px;
+      color: #484f58;
+      margin-top: 16px;
     }
 
     /* ── Footer ── */
@@ -409,17 +431,24 @@
       color: var(--text-muted);
       font-size: 14px;
     }
-
     footer a { color: var(--blue); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
-
     .heart { color: var(--red); }
 
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #484f58; }
+
+    /* ── Responsive ── */
     @media (max-width: 600px) {
-      .ch-row, .col-header {
-        grid-template-columns: 30px 1fr 1fr;
-      }
-      .ch-en { display: none; }
+      .col-header,
+      .ch-row { grid-template-columns: 30px 1fr 1fr; }
+      .ch-en  { display: none; }
+      .search-wrap { width: 180px; }
+      .search-wrap:focus-within { width: 220px; }
+      #search-count { display: none; }
     }
   </style>
 </head>
@@ -454,7 +483,7 @@
       <span class="t-title">bash — tlcl-translation</span>
     </div>
     <div class="terminal-body">
-      <div><span class="t-prompt">nawid@linux:~$</span> <span class="t-cmd">cat README.md | head -5</span></div>
+      <div><span class="t-prompt">nawid@linux:~$</span> cat README.md | head -5</div>
       <div class="t-out"># ترجمه‌ی «خط فرمان لینوکس»</div>
       <div class="t-out">زبان: <span class="t-hi">فارسی</span> و <span class="t-hi">کوردی-سورانی</span></div>
       <div class="t-out">فصل‌ها: <span class="t-hi">۳۶ فصل × ۲ زبان</span> — پارت ۱ تا ۴</div>
@@ -463,7 +492,7 @@
   </div>
 
   <div class="langs">
-    <a class="lang-btn fa" href="fa/chapters/ch00-introduction">📘 شروع به خواندن — فارسی</a>
+    <a class="lang-btn fa"  href="fa/chapters/ch00-introduction">📘 شروع به خواندن — فارسی</a>
     <a class="lang-btn ckb" href="ckb/chapters/ch00-introduction">📗 دەست پێبکە — کوردی سۆرانی</a>
   </div>
 </section>
@@ -471,24 +500,11 @@
 <!-- ══ MAIN ══ -->
 <main class="container">
 
-  <!-- Stats -->
   <div class="stats">
-    <div class="stat-card">
-      <span class="stat-num">۳۶</span>
-      <div class="stat-label">فصل ترجمه‌شده</div>
-    </div>
-    <div class="stat-card">
-      <span class="stat-num">۲</span>
-      <div class="stat-label">زبان</div>
-    </div>
-    <div class="stat-card">
-      <span class="stat-num">۴</span>
-      <div class="stat-label">پارت</div>
-    </div>
-    <div class="stat-card">
-      <span class="stat-num">١٠٠٪</span>
-      <div class="stat-label">هر دو زبان</div>
-    </div>
+    <div class="stat-card"><span class="stat-num">۳۶</span><div class="stat-label">فصل ترجمه‌شده</div></div>
+    <div class="stat-card"><span class="stat-num">۲</span><div class="stat-label">زبان</div></div>
+    <div class="stat-card"><span class="stat-num">۴</span><div class="stat-label">پارت</div></div>
+    <div class="stat-card"><span class="stat-num">١٠٠٪</span><div class="stat-label">هر دو زبان</div></div>
   </div>
 
   <h2 class="section-title">📚 فهرست فصل‌ها</h2>
@@ -507,7 +523,7 @@
       <div class="ch-row">
         <span class="ch-num">٠٠</span>
         <span class="ch-en">Introduction</span>
-        <a class="ch-link fa" href="fa/chapters/ch00-introduction">📄 مقدمه</a>
+        <a class="ch-link fa"  href="fa/chapters/ch00-introduction">📄 مقدمه</a>
         <a class="ch-link ckb" href="ckb/chapters/ch00-introduction">📄 پێشەکی</a>
       </div>
     </div>
@@ -527,61 +543,61 @@
       <div class="ch-row">
         <span class="ch-num">١</span>
         <span class="ch-en">What Is the Shell?</span>
-        <a class="ch-link fa" href="fa/chapters/ch01-what-is-the-shell">شل چیست؟</a>
+        <a class="ch-link fa"  href="fa/chapters/ch01-what-is-the-shell">شل چیست؟</a>
         <a class="ch-link ckb" href="ckb/chapters/ch01-what-is-the-shell">شێل چییە؟</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٢</span>
         <span class="ch-en">Navigation</span>
-        <a class="ch-link fa" href="fa/chapters/ch02-navigation">ناوبری</a>
+        <a class="ch-link fa"  href="fa/chapters/ch02-navigation">ناوبری</a>
         <a class="ch-link ckb" href="ckb/chapters/ch02-navigation">گەڕان</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٣</span>
         <span class="ch-en">Exploring the System</span>
-        <a class="ch-link fa" href="fa/chapters/ch03-exploring-the-system">کاوش در سیستم</a>
+        <a class="ch-link fa"  href="fa/chapters/ch03-exploring-the-system">کاوش در سیستم</a>
         <a class="ch-link ckb" href="ckb/chapters/ch03-exploring-the-system">گەڕانەوەی سیستەم</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٤</span>
         <span class="ch-en">Manipulating Files</span>
-        <a class="ch-link fa" href="fa/chapters/ch04-manipulating-files">کار با فایل‌ها</a>
+        <a class="ch-link fa"  href="fa/chapters/ch04-manipulating-files">کار با فایل‌ها</a>
         <a class="ch-link ckb" href="ckb/chapters/ch04-manipulating-files">کارکردن لەگەڵ فایل</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٥</span>
         <span class="ch-en">Working with Commands</span>
-        <a class="ch-link fa" href="fa/chapters/ch05-working-with-commands">کار با دستورها</a>
+        <a class="ch-link fa"  href="fa/chapters/ch05-working-with-commands">کار با دستورها</a>
         <a class="ch-link ckb" href="ckb/chapters/ch05-working-with-commands">کارکردن لەگەڵ فەرمانەکان</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٦</span>
         <span class="ch-en">Redirection</span>
-        <a class="ch-link fa" href="fa/chapters/ch06-redirection">تغییر مسیر</a>
+        <a class="ch-link fa"  href="fa/chapters/ch06-redirection">تغییر مسیر</a>
         <a class="ch-link ckb" href="ckb/chapters/ch06-redirection">ئاڕاستەکردنەوە</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٧</span>
         <span class="ch-en">Seeing the World as the Shell</span>
-        <a class="ch-link fa" href="fa/chapters/ch07-seeing-the-world-as-shell">دنیا از چشم شل</a>
+        <a class="ch-link fa"  href="fa/chapters/ch07-seeing-the-world-as-shell">دنیا از چشم شل</a>
         <a class="ch-link ckb" href="ckb/chapters/ch07-seeing-the-world-as-shell">جیهان لە چاوی شێل</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٨</span>
         <span class="ch-en">Advanced Keyboard Tricks</span>
-        <a class="ch-link fa" href="fa/chapters/ch08-advanced-keyboard">ترفندهای صفحه‌کلید</a>
+        <a class="ch-link fa"  href="fa/chapters/ch08-advanced-keyboard">ترفندهای صفحه‌کلید</a>
         <a class="ch-link ckb" href="ckb/chapters/ch08-advanced-keyboard">ئامرازی پەرەپێدراوی کیبۆرد</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٩</span>
         <span class="ch-en">Permissions</span>
-        <a class="ch-link fa" href="fa/chapters/ch09-permissions">مجوزها</a>
+        <a class="ch-link fa"  href="fa/chapters/ch09-permissions">مجوزها</a>
         <a class="ch-link ckb" href="ckb/chapters/ch09-permissions">مۆڵەتەکان</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">١٠</span>
         <span class="ch-en">Processes</span>
-        <a class="ch-link fa" href="fa/chapters/ch10-processes">فرآیندها</a>
+        <a class="ch-link fa"  href="fa/chapters/ch10-processes">فرآیندها</a>
         <a class="ch-link ckb" href="ckb/chapters/ch10-processes">پرۆسەکان</a>
       </div>
     </div>
@@ -601,19 +617,19 @@
       <div class="ch-row">
         <span class="ch-num">١١</span>
         <span class="ch-en">The Environment</span>
-        <a class="ch-link fa" href="fa/chapters/ch11-the-environment">محیط</a>
+        <a class="ch-link fa"  href="fa/chapters/ch11-the-environment">محیط</a>
         <a class="ch-link ckb" href="ckb/chapters/ch11-the-environment">ژینگە</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">١٢</span>
         <span class="ch-en">A Gentle Introduction to vi</span>
-        <a class="ch-link fa" href="fa/chapters/ch12-a-gentle-introduction-to-vi">آشنایی با vi</a>
+        <a class="ch-link fa"  href="fa/chapters/ch12-a-gentle-introduction-to-vi">آشنایی با vi</a>
         <a class="ch-link ckb" href="ckb/chapters/ch12-a-gentle-introduction-to-vi">ناساندنی vi</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">١٣</span>
         <span class="ch-en">Customizing the Prompt</span>
-        <a class="ch-link fa" href="fa/chapters/ch13-customizing-the-prompt">سفارشی‌سازی پرامپت</a>
+        <a class="ch-link fa"  href="fa/chapters/ch13-customizing-the-prompt">سفارشی‌سازی پرامپت</a>
         <a class="ch-link ckb" href="ckb/chapters/ch13-customizing-the-prompt">دیزاینکردنی پرامپت</a>
       </div>
     </div>
@@ -633,61 +649,61 @@
       <div class="ch-row">
         <span class="ch-num">١٤</span>
         <span class="ch-en">Package Management</span>
-        <a class="ch-link fa" href="fa/chapters/ch14-package-management">مدیریت بسته</a>
+        <a class="ch-link fa"  href="fa/chapters/ch14-package-management">مدیریت بسته</a>
         <a class="ch-link ckb" href="ckb/chapters/ch14-package-management">بەڕێوەبردنی پاکێج</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">١٥</span>
         <span class="ch-en">Storage Media</span>
-        <a class="ch-link fa" href="fa/chapters/ch15-storage-media">رسانه‌ی ذخیره‌سازی</a>
+        <a class="ch-link fa"  href="fa/chapters/ch15-storage-media">رسانه‌ی ذخیره‌سازی</a>
         <a class="ch-link ckb" href="ckb/chapters/ch15-storage-media">میدیای ستۆرکردن</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">١٦</span>
         <span class="ch-en">Networking</span>
-        <a class="ch-link fa" href="fa/chapters/ch16-networking">شبکه</a>
+        <a class="ch-link fa"  href="fa/chapters/ch16-networking">شبکه</a>
         <a class="ch-link ckb" href="ckb/chapters/ch16-networking">تۆڕبەندی</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">١٧</span>
         <span class="ch-en">Searching for Files</span>
-        <a class="ch-link fa" href="fa/chapters/ch17-searching-for-files">جستجو در فایل‌ها</a>
+        <a class="ch-link fa"  href="fa/chapters/ch17-searching-for-files">جستجو در فایل‌ها</a>
         <a class="ch-link ckb" href="ckb/chapters/ch17-searching-for-files">گەڕان لە فایلەکان</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">١٨</span>
         <span class="ch-en">Archiving and Backup</span>
-        <a class="ch-link fa" href="fa/chapters/ch18-archiving-and-backup">آرشیو و پشتیبان‌گیری</a>
+        <a class="ch-link fa"  href="fa/chapters/ch18-archiving-and-backup">آرشیو و پشتیبان‌گیری</a>
         <a class="ch-link ckb" href="ckb/chapters/ch18-archiving-and-backup">ئەرشیڤ و پشتیوانی</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">١٩</span>
         <span class="ch-en">Regular Expressions</span>
-        <a class="ch-link fa" href="fa/chapters/ch19-regular-expressions">عبارات باقاعده</a>
+        <a class="ch-link fa"  href="fa/chapters/ch19-regular-expressions">عبارات باقاعده</a>
         <a class="ch-link ckb" href="ckb/chapters/ch19-regular-expressions">دەقی ئایەتی</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٢٠</span>
         <span class="ch-en">Text Processing</span>
-        <a class="ch-link fa" href="fa/chapters/ch20-text-processing">پردازش متن</a>
+        <a class="ch-link fa"  href="fa/chapters/ch20-text-processing">پردازش متن</a>
         <a class="ch-link ckb" href="ckb/chapters/ch20-text-processing">پرۆسێسکردنی دەق</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٢١</span>
         <span class="ch-en">Formatting Output</span>
-        <a class="ch-link fa" href="fa/chapters/ch21-formatting-output">قالب‌بندی خروجی</a>
+        <a class="ch-link fa"  href="fa/chapters/ch21-formatting-output">قالب‌بندی خروجی</a>
         <a class="ch-link ckb" href="ckb/chapters/ch21-formatting-output">فۆرماتکردنی ئاوتپوت</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٢٢</span>
         <span class="ch-en">Printing</span>
-        <a class="ch-link fa" href="fa/chapters/ch22-printing">چاپ</a>
+        <a class="ch-link fa"  href="fa/chapters/ch22-printing">چاپ</a>
         <a class="ch-link ckb" href="ckb/chapters/ch22-printing">چاپکردن</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٢٣</span>
         <span class="ch-en">Compiling Programs</span>
-        <a class="ch-link fa" href="fa/chapters/ch23-compiling-programs">کامپایل برنامه‌ها</a>
+        <a class="ch-link fa"  href="fa/chapters/ch23-compiling-programs">کامپایل برنامه‌ها</a>
         <a class="ch-link ckb" href="ckb/chapters/ch23-compiling-programs">کۆمپایڵکردنی بەرنامەکان</a>
       </div>
     </div>
@@ -707,79 +723,79 @@
       <div class="ch-row">
         <span class="ch-num">٢٤</span>
         <span class="ch-en">Writing Your First Script</span>
-        <a class="ch-link fa" href="fa/chapters/ch24-writing-your-first-script">اولین اسکریپت</a>
+        <a class="ch-link fa"  href="fa/chapters/ch24-writing-your-first-script">اولین اسکریپت</a>
         <a class="ch-link ckb" href="ckb/chapters/ch24-writing-your-first-script">نووسینی یەکەم ئیسکریپت</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٢٥</span>
         <span class="ch-en">Starting a Project</span>
-        <a class="ch-link fa" href="fa/chapters/ch25-starting-a-project">شروع یک پروژه</a>
+        <a class="ch-link fa"  href="fa/chapters/ch25-starting-a-project">شروع یک پروژه</a>
         <a class="ch-link ckb" href="ckb/chapters/ch25-starting-a-project">دەستپێکردنی پڕۆژەیەک</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٢٦</span>
         <span class="ch-en">Top-Down Design</span>
-        <a class="ch-link fa" href="fa/chapters/ch26-top-down-design">طراحی از بالا به پایین</a>
+        <a class="ch-link fa"  href="fa/chapters/ch26-top-down-design">طراحی از بالا به پایین</a>
         <a class="ch-link ckb" href="ckb/chapters/ch26-top-down-design">دیزاینی لە سەرەوە بۆ خوارەوە</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٢٧</span>
         <span class="ch-en">Flow Control: if</span>
-        <a class="ch-link fa" href="fa/chapters/ch27-flow-control-branching-with-if">شاخه‌بندی با if</a>
+        <a class="ch-link fa"  href="fa/chapters/ch27-flow-control-branching-with-if">شاخه‌بندی با if</a>
         <a class="ch-link ckb" href="ckb/chapters/ch27-flow-control-branching-with-if">لقبەندی بە if</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٢٨</span>
         <span class="ch-en">Reading Keyboard Input</span>
-        <a class="ch-link fa" href="fa/chapters/ch28-reading-keyboard-input">ورودی از صفحه‌کلید</a>
+        <a class="ch-link fa"  href="fa/chapters/ch28-reading-keyboard-input">ورودی از صفحه‌کلید</a>
         <a class="ch-link ckb" href="ckb/chapters/ch28-reading-keyboard-input">خوێندنەوەی تێخستنی کیبۆرد</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٢٩</span>
         <span class="ch-en">Flow Control: while/until</span>
-        <a class="ch-link fa" href="fa/chapters/ch29-flow-control-looping-with-while-until">حلقه با while/until</a>
+        <a class="ch-link fa"  href="fa/chapters/ch29-flow-control-looping-with-while-until">حلقه با while/until</a>
         <a class="ch-link ckb" href="ckb/chapters/ch29-flow-control-looping-with-while-until">سووڕ بە while/until</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٣٠</span>
         <span class="ch-en">Troubleshooting</span>
-        <a class="ch-link fa" href="fa/chapters/ch30-troubleshooting">رفع اشکال</a>
+        <a class="ch-link fa"  href="fa/chapters/ch30-troubleshooting">رفع اشکال</a>
         <a class="ch-link ckb" href="ckb/chapters/ch30-troubleshooting">چارەسەرکردنی کێشەکان</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٣١</span>
         <span class="ch-en">Flow Control: case</span>
-        <a class="ch-link fa" href="fa/chapters/ch31-flow-control-branching-with-case">شاخه‌بندی با case</a>
+        <a class="ch-link fa"  href="fa/chapters/ch31-flow-control-branching-with-case">شاخه‌بندی با case</a>
         <a class="ch-link ckb" href="ckb/chapters/ch31-flow-control-branching-with-case">لقبەندی بە case</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٣٢</span>
         <span class="ch-en">Positional Parameters</span>
-        <a class="ch-link fa" href="fa/chapters/ch32-positional-parameters">پارامترهای موضعی</a>
+        <a class="ch-link fa"  href="fa/chapters/ch32-positional-parameters">پارامترهای موضعی</a>
         <a class="ch-link ckb" href="ckb/chapters/ch32-positional-parameters">پارامێتەرەکانی شوێنی</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٣٣</span>
         <span class="ch-en">Flow Control: for</span>
-        <a class="ch-link fa" href="fa/chapters/ch33-flow-control-looping-with-for">حلقه با for</a>
+        <a class="ch-link fa"  href="fa/chapters/ch33-flow-control-looping-with-for">حلقه با for</a>
         <a class="ch-link ckb" href="ckb/chapters/ch33-flow-control-looping-with-for">سووڕ بە for</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٣٤</span>
         <span class="ch-en">Strings and Numbers</span>
-        <a class="ch-link fa" href="fa/chapters/ch34-strings-and-numbers">رشته‌ها و اعداد</a>
+        <a class="ch-link fa"  href="fa/chapters/ch34-strings-and-numbers">رشته‌ها و اعداد</a>
         <a class="ch-link ckb" href="ckb/chapters/ch34-strings-and-numbers">ستریمگەکان و ژمارەکان</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٣٥</span>
         <span class="ch-en">Arrays</span>
-        <a class="ch-link fa" href="fa/chapters/ch35-arrays">آرایه‌ها</a>
+        <a class="ch-link fa"  href="fa/chapters/ch35-arrays">آرایه‌ها</a>
         <a class="ch-link ckb" href="ckb/chapters/ch35-arrays">ئەرەیەکان</a>
       </div>
       <div class="ch-row">
         <span class="ch-num">٣٦</span>
         <span class="ch-en">Exotica</span>
-        <a class="ch-link fa" href="fa/chapters/ch36-exotica">موارد خاص</a>
+        <a class="ch-link fa"  href="fa/chapters/ch36-exotica">موارد خاص</a>
         <a class="ch-link ckb" href="ckb/chapters/ch36-exotica">تایبەتمەندییە تایبەتەکان</a>
       </div>
     </div>
@@ -787,50 +803,19 @@
 
 </main>
 
-<!-- ══ REPORT ══ -->
-<section style="background:#0d1117; border-top:1px solid #30363d; padding:48px 20px;">
-  <div style="max-width:640px; margin:0 auto; text-align:center;">
-    <div style="
-      background:#161b22;
-      border:1px solid #30363d;
-      border-top:3px solid #f85149;
-      border-radius:12px;
-      padding:32px 28px;
-    ">
-      <div style="font-size:32px; margin-bottom:12px;">🐛</div>
-      <h2 style="font-size:18px; font-weight:700; color:#e6edf3; margin-bottom:8px;">
-        اشتباه ترجمه دیدی؟ | ئەگەر هەڵەی وەرگێڕان بینی؟
-      </h2>
-      <p style="font-size:14px; color:#8b949e; margin-bottom:6px;">
-        اگر غلط ترجمه‌ای، نادرستی فنی یا مشکلی در محتوا دیدی، خوشحال می‌شیم بدونیم.
-      </p>
-      <p style="font-size:13px; color:#8b949e; margin-bottom:24px;">
-        ئەگەر هەڵەی وەرگێڕان، هەڵەی تەکنیکی یان کێشەیەکت بینی، بە خۆشحاڵی ئاگامان پێبدە.
-      </p>
-      <a href="mailto:non.noqteh@gmail.com?subject=گزارش اشتباه ترجمه — TLCL&body=فصل / بابەت:%0Aمشکل / کێشە:%0A"
-        style="
-          display:inline-flex;
-          align-items:center;
-          gap:8px;
-          background:rgba(248,81,73,.1);
-          border:1px solid #f85149;
-          border-radius:8px;
-          padding:12px 28px;
-          color:#f85149;
-          text-decoration:none;
-          font-size:15px;
-          font-weight:600;
-          font-family:'Vazirmatn',sans-serif;
-          transition:background .2s;
-        "
-        onmouseover="this.style.background='rgba(248,81,73,.2)'"
-        onmouseout="this.style.background='rgba(248,81,73,.1)'"
-      >
-        ✉️ &nbsp; گزارش مشکل | ڕاپۆرتی کێشە
+<!-- ══ BUG REPORT ══ -->
+<section class="report-section">
+  <div class="report-inner">
+    <div class="report-card">
+      <div class="report-icon">🐛</div>
+      <h2 class="report-title">اشتباه ترجمه دیدی؟ | ئەگەر هەڵەی وەرگێڕان بینی؟</h2>
+      <p class="report-desc">اگر غلط ترجمه‌ای، نادرستی فنی یا مشکلی در محتوا دیدی، خوشحال می‌شیم بدونیم.</p>
+      <p class="report-desc-ckb">ئەگەر هەڵەی وەرگێڕان، هەڵەی تەکنیکی یان کێشەیەکت بینی، بە خۆشحاڵی ئاگامان پێبدە.</p>
+      <a class="report-btn"
+         href="mailto:non.noqteh@gmail.com?subject=گزارش اشتباه ترجمه — TLCL&body=فصل / بابەت:%0Aمشکل / کێشە:%0A">
+        ✉️ گزارش مشکل | ڕاپۆرتی کێشە
       </a>
-      <p style="font-size:12px; color:#484f58; margin-top:16px;">
-        non.noqteh@gmail.com
-      </p>
+      <p class="report-email">non.noqteh@gmail.com</p>
     </div>
   </div>
 </section>
@@ -839,14 +824,14 @@
 <footer>
   <p>
     بر اساس کتاب
-    <a href="https://linuxcommand.org/tlcl.php" target="_blank">The Linux Command Line</a>
+    <a href="https://linuxcommand.org/tlcl.php" target="_blank" rel="noopener">The Linux Command Line</a>
     نوشته‌ی <strong>William E. Shotts, Jr.</strong>
   </p>
   <p style="margin-top:8px;">
     لایسنس:
-    <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">CC BY-NC-ND 3.0</a>
+    <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank" rel="noopener">CC BY-NC-ND 3.0</a>
     &nbsp;|&nbsp;
-    <a href="https://github.com/nonnoqteh/tlcl-translation" target="_blank">GitHub ↗</a>
+    <a href="https://github.com/nonnoqteh/tlcl-translation" target="_blank" rel="noopener">GitHub ↗</a>
   </p>
   <p style="margin-top:16px; font-size:18px;">
     با <span class="heart">❤️</span> ترجمه شده. &nbsp; بە <span class="heart">❤️</span> وەرگێڕدراوە.
@@ -855,22 +840,18 @@
 
 <script>
 (function () {
-  const input = document.getElementById('search-input');
+  const input    = document.getElementById('search-input');
   const clearBtn = document.getElementById('search-clear');
-  const countEl = document.getElementById('search-count');
-  const rows = Array.from(document.querySelectorAll('.ch-row'));
+  const countEl  = document.getElementById('search-count');
+  const rows  = Array.from(document.querySelectorAll('.ch-row'));
   const parts = Array.from(document.querySelectorAll('.part'));
-
-  function getText(row) {
-    return row.innerText.toLowerCase();
-  }
 
   function doSearch(q) {
     q = q.trim().toLowerCase();
     clearBtn.style.display = q ? 'block' : 'none';
 
     if (!q) {
-      rows.forEach(r => { r.classList.remove('hidden', 'highlight'); });
+      rows.forEach(r => r.classList.remove('hidden', 'highlight'));
       parts.forEach(p => p.classList.remove('all-hidden'));
       countEl.textContent = '';
       return;
@@ -878,16 +859,14 @@
 
     let total = 0;
     rows.forEach(r => {
-      const match = getText(r).includes(q);
-      r.classList.toggle('hidden', !match);
-      r.classList.toggle('highlight', match);
+      const match = r.innerText.toLowerCase().includes(q);
+      r.classList.toggle('hidden',    !match);
+      r.classList.toggle('highlight',  match);
       if (match) total++;
     });
 
-    // hide parts where all ch-rows are hidden
     parts.forEach(p => {
-      const visible = p.querySelectorAll('.ch-row:not(.hidden)').length;
-      p.classList.toggle('all-hidden', visible === 0);
+      p.classList.toggle('all-hidden', p.querySelectorAll('.ch-row:not(.hidden)').length === 0);
     });
 
     countEl.textContent = total ? total + ' نتیجه' : 'نتیجه‌ای نیست';
@@ -896,12 +875,8 @@
   input.addEventListener('input', e => doSearch(e.target.value));
   clearBtn.addEventListener('click', () => { input.value = ''; doSearch(''); input.focus(); });
 
-  // Keyboard shortcut: / to focus search
   document.addEventListener('keydown', e => {
-    if (e.key === '/' && document.activeElement !== input) {
-      e.preventDefault();
-      input.focus();
-    }
+    if (e.key === '/' && document.activeElement !== input) { e.preventDefault(); input.focus(); }
     if (e.key === 'Escape') { input.value = ''; doSearch(''); }
   });
 })();
