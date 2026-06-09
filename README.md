@@ -38,6 +38,7 @@ tlcl-translation/
 | فصل | عنوان اصلی | فارسی | کوردی-سورانی | وضعیت |
 |-----|------------|-------|--------------|--------|
 | مقدمه | Introduction | [مقدمه](./fa/chapters/ch00-introduction.md) | [پێشەکی](./ckb/chapters/ch00-introduction.md) | ✅ |
+| **پارت ۱ — یادگیری شل \| پارتی یەک — فێربوونی شێل** | | | | |
 | 1 | What Is the Shell? | [شل چیست؟](./fa/chapters/ch01-what-is-the-shell.md) | [شێل چییە؟](./ckb/chapters/ch01-what-is-the-shell.md) | ✅ |
 | 2 | Navigation | [ناوبری](./fa/chapters/ch02-navigation.md) | [گەڕان](./ckb/chapters/ch02-navigation.md) | ✅ |
 | 3 | Exploring the System | [کاوش در سیستم](./fa/chapters/ch03-exploring-the-system.md) | [گەڕانەوەی سیستەم](./ckb/chapters/ch03-exploring-the-system.md) | ✅ |
