@@ -38,16 +38,16 @@ tlcl-translation/
 | فصل | عنوان اصلی | فارسی | کوردی-سورانی | وضعیت |
 |-----|------------|-------|--------------|--------|
 | مقدمه | Introduction | [مقدمه](./fa/chapters/ch00-introduction.md) | پێشەکی | ✅ |
-| 1 | What Is the Shell? | [شل چیست؟](./fa/chapters/ch01-what-is-the-shell.md) | شێل چییە؟ | ✅ |
-| 2 | Navigation | [ناوبری](./fa/chapters/ch02-navigation.md) | گەڕان | ✅ |
-| 3 | Exploring the System | [کاوش در سیستم](./fa/chapters/ch03-exploring-the-system.md) | گەڕانەوەی سیستەم | ✅ |
-| 4 | Manipulating Files and Directories | [کار با فایل‌ها و پوشه‌ها](./fa/chapters/ch04-manipulating-files.md) | کارکردن لەگەڵ فایل و فۆڵدەرەکان | ✅ |
-| 5 | Working with Commands | [کار با دستورها](./fa/chapters/ch05-working-with-commands.md) | کارکردن لەگەڵ فەرمانەکان | ✅ |
-| 6 | Redirection | [تغییر مسیر ورودی/خروجی](./fa/chapters/ch06-redirection.md) | ئاڕاستەکردنەوە | ✅ |
-| 7 | Seeing the World as the Shell Sees It | [دیدن دنیا از چشم شل](./fa/chapters/ch07-seeing-the-world-as-shell.md) | جیهان لە چاوی شێلەوە | ✅ |
-| 8 | Advanced Keyboard Tricks | [ترفندهای پیشرفته‌ی صفحه‌کلید](./fa/chapters/ch08-advanced-keyboard.md) | ئامرازی پەرەپێدراوی کیبۆرد | ✅ |
-| 9 | Permissions | [مجوزها](./fa/chapters/ch09-permissions.md) | مۆڵەتەکان | ✅ |
-| 10 | Processes | [فرآیندها](./fa/chapters/ch10-processes.md) | پرۆسەکان | ✅ |
+| 1 | What Is the Shell? | [شل چیست؟](./fa/chapters/ch01-what-is-the-shell.md) | [شێل چییە؟](./ckb/chapters/ch01-what-is-the-shell.md) | ✅ |
+| 2 | Navigation | [ناوبری](./fa/chapters/ch02-navigation.md) | [گەڕان](./ckb/chapters/ch02-navigation.md) | ✅ |
+| 3 | Exploring the System | [کاوش در سیستم](./fa/chapters/ch03-exploring-the-system.md) | [گەڕانەوەی سیستەم](./ckb/chapters/ch03-exploring-the-system.md) | ✅ |
+| 4 | Manipulating Files and Directories | [کار با فایل‌ها و پوشه‌ها](./fa/chapters/ch04-manipulating-files.md) | [کارکردن لەگەڵ فایل و فۆڵدەر](./ckb/chapters/ch04-manipulating-files.md) | ✅ |
+| 5 | Working with Commands | [کار با دستورها](./fa/chapters/ch05-working-with-commands.md) | [کارکردن لەگەڵ فەرمانەکان](./ckb/chapters/ch05-working-with-commands.md) | ✅ |
+| 6 | Redirection | [تغییر مسیر ورودی/خروجی](./fa/chapters/ch06-redirection.md) | [ئاڕاستەکردنەوە](./ckb/chapters/ch06-redirection.md) | ✅ |
+| 7 | Seeing the World as the Shell Sees It | [دیدن دنیا از چشم شل](./fa/chapters/ch07-seeing-the-world-as-shell.md) | [جیهان لە چاوی شێلەوە](./ckb/chapters/ch07-seeing-the-world-as-shell.md) | ✅ |
+| 8 | Advanced Keyboard Tricks | [ترفندهای پیشرفته‌ی صفحه‌کلید](./fa/chapters/ch08-advanced-keyboard.md) | [ئامرازی پەرەپێدراوی کیبۆرد](./ckb/chapters/ch08-advanced-keyboard.md) | ✅ |
+| 9 | Permissions | [مجوزها](./fa/chapters/ch09-permissions.md) | [مۆڵەتەکان](./ckb/chapters/ch09-permissions.md) | ✅ |
+| 10 | Processes | [فرآیندها](./fa/chapters/ch10-processes.md) | [پرۆسەکان](./ckb/chapters/ch10-processes.md) | ✅ |
 
 > وضعیت: ✅ تکمیل | 🔄 در حال ترجمه | ⬜ شروع نشده
 
