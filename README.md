@@ -79,6 +79,7 @@ tlcl-translation/
 | ٣٤ | Strings and Numbers | [رشته‌ها و اعداد](./fa/chapters/ch34-strings-and-numbers.md) | [ستریمگەکان و ژمارەکان](./ckb/chapters/ch34-strings-and-numbers.md) |
 | ٣٥ | Arrays | [آرایه‌ها](./fa/chapters/ch35-arrays.md) | [ئەرەیەکان](./ckb/chapters/ch35-arrays.md) |
 | ٣٦ | Exotica | [موارد خاص](./fa/chapters/ch36-exotica.md) | [تایبەتمەندییە تایبەتەکان](./ckb/chapters/ch36-exotica.md) |
+| — | Colophon | [کولوفون](./fa/chapters/colophon.md) | [کۆلۆفۆن](./ckb/chapters/colophon.md) |
 
 ---
 
