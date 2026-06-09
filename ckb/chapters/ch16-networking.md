@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ١٦ — تۆڕبەندی
 ### Chapter 16 – Networking
 

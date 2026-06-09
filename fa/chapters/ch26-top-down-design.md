@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۲۶ — طراحی از بالا به پایین
 ### Chapter 26 – Top-Down Design
 

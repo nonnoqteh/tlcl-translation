@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۲۱ — قالب‌بندی خروجی
 ### Chapter 21 – Formatting Output
 

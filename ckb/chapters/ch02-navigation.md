@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ٢ — گەڕان
 ### Chapter 2 – Navigation
 

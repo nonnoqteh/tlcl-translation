@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۶ — تغییر مسیر (Redirection)
 ### Chapter 6 – Redirection
 

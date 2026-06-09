@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۲۰ — پردازش متن
 ### Chapter 20 – Text Processing
 

@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ٢٢ — چاپکردن
 ### Chapter 22 – Printing
 

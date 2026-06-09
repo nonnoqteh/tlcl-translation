@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۳۱ — کنترل جریان: شاخه‌بندی با case
 ### Chapter 31 – Flow Control: Branching with case
 

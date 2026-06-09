@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۳۲ — پارامترهای موضعی
 ### Chapter 32 – Positional Parameters
 

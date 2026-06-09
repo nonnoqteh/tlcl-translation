@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۳۰ — رفع اشکال
 ### Chapter 30 – Troubleshooting
 

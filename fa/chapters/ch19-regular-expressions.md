@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۱۹ — عبارات باقاعده
 ### Chapter 19 – Regular Expressions
 

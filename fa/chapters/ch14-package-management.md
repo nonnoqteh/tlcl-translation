@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۱۴ — مدیریت بسته
 ### Chapter 14 – Package Management
 

@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ٤ — کارکردن لەگەڵ فایل و فۆڵدەر
 ### Chapter 4 – Manipulating Files and Directories
 

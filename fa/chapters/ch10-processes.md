@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۱۰ — فرآیندها
 ### Chapter 10 – Processes
 

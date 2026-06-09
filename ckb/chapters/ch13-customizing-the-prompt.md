@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ١٣ — دیزاینکردنی پرامپت
 ### Chapter 13 – Customizing the Prompt
 

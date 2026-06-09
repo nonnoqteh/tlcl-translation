@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۳۳ — کنترل جریان: حلقه با for
 ### Chapter 33 – Flow Control: Looping with for
 

@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۲۵ — شروع یک پروژه
 ### Chapter 25 – Starting a Project
 

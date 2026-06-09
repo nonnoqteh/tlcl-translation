@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ١ — شێل چییە؟
 ### Chapter 1 – What Is the Shell?
 

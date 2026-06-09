@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۱۲ — آشنایی با vi
 ### Chapter 12 – A Gentle Introduction to vi
 

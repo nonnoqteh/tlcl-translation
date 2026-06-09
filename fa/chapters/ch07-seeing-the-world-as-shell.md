@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۷ — دیدن دنیا از چشم شل
 ### Chapter 7 – Seeing the World as the Shell Sees It
 

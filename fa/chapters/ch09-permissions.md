@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۹ — مجوزها
 ### Chapter 9 – Permissions
 

@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل X — عنوان فصل
 ### Chapter X — Chapter Title
 

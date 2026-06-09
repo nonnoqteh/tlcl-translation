@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ٣ — گەڕانەوەی سیستەم
 ### Chapter 3 – Exploring the System
 

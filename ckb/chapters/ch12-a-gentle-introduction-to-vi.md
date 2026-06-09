@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ١٢ — ناساندنی vi
 ### Chapter 12 – A Gentle Introduction to vi
 

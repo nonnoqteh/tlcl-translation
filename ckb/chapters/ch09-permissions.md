@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ٩ — مۆڵەتەکان
 ### Chapter 9 – Permissions
 

@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ٧ — جیهان لە چاوی شێلەوە
 ### Chapter 7 – Seeing the World as the Shell Sees It
 

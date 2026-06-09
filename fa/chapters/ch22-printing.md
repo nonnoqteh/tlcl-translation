@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۲۲ — چاپ
 ### Chapter 22 – Printing
 

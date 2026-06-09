@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۳۴ — رشته‌ها و اعداد
 ### Chapter 34 – Strings and Numbers
 

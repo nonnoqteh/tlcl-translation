@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ١٤ — بەڕێوەبردنی پاکێج
 ### Chapter 14 – Package Management
 

@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ١١ — ژینگە
 ### Chapter 11 – The Environment
 

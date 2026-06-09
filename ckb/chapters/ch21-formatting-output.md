@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ٢١ — فۆرماتکردنی ئاوتپوت
 ### Chapter 21 – Formatting Output
 

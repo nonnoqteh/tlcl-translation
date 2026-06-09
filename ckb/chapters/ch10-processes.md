@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ١٠ — پرۆسەکان
 ### Chapter 10 – Processes
 

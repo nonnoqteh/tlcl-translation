@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۲۴ — نوشتن اولین اسکریپت
 ### Chapter 24 – Writing Your First Script
 

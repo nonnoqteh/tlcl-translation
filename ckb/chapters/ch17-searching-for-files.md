@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ١٧ — گەڕان لە فایلەکان
 ### Chapter 17 – Searching for Files
 

@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ١٥ — میدیای ستۆرکردن
 ### Chapter 15 – Storage Media
 

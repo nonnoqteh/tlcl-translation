@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۱۶ — شبکه
 ### Chapter 16 – Networking
 

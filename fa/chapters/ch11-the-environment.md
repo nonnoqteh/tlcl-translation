@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۱۱ — محیط
 ### Chapter 11 – The Environment
 

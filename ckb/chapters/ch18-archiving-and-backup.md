@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ١٨ — ئەرشیڤ و پشتیوانی
 ### Chapter 18 – Archiving and Backup
 

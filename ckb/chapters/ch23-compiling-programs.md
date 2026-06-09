@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ٢٣ — کۆمپایڵکردنی بەرنامەکان
 ### Chapter 23 – Compiling Programs
 

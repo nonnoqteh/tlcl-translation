@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۲۳ — کامپایل کردن برنامه‌ها
 ### Chapter 23 – Compiling Programs
 

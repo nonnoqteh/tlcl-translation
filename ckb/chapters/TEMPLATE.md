@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # باپەڕەی X — سەردێڕی باپەڕە
 ### Chapter X — Chapter Title
 

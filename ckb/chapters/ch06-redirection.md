@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ٦ — ئاڕاستەکردنەوە (Redirection)
 ### Chapter 6 – Redirection
 

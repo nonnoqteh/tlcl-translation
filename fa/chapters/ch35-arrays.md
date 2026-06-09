@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۳۵ — آرایه‌ها
 ### Chapter 35 – Arrays
 

@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۴ — کار با فایل‌ها و پوشه‌ها
 ### Chapter 4 – Manipulating Files and Directories
 

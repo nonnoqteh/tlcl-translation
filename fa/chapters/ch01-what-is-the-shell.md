@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۱ — شل چیست؟
 ### Chapter 1 – What Is the Shell?
 

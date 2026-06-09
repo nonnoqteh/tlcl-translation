@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ١٩ — دەقی ئایەتی (Regular Expressions)
 ### Chapter 19 – Regular Expressions
 

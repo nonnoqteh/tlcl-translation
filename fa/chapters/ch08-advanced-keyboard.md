@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۸ — ترفندهای پیشرفته‌ی صفحه‌کلید
 ### Chapter 8 – Advanced Keyboard Tricks
 

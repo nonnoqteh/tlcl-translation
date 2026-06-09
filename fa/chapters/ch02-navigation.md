@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۲ — ناوبری
 ### Chapter 2 – Navigation
 

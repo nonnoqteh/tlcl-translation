@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ٢٠ — پرۆسێسکردنی دەق
 ### Chapter 20 – Text Processing
 

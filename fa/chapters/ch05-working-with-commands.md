@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۵ — کار با دستورها
 ### Chapter 5 – Working with Commands
 

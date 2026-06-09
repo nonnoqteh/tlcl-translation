@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۱۳ — سفارشی‌سازی پرامپت
 ### Chapter 13 – Customizing the Prompt
 

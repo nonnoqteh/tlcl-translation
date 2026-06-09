@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ٨ — ئامرازی پەرەپێدراوی کیبۆرد
 ### Chapter 8 – Advanced Keyboard Tricks
 

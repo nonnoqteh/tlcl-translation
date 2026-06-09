@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۳ — کاوش در سیستم
 ### Chapter 3 – Exploring the System
 

@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۲۸ — خواندن ورودی از صفحه‌کلید
 ### Chapter 28 – Reading Keyboard Input
 

@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۱۵ — رسانه‌ی ذخیره‌سازی
 ### Chapter 15 – Storage Media
 

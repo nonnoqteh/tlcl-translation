@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # بابەتی ٥ — کارکردن لەگەڵ فەرمانەکان
 ### Chapter 5 – Working with Commands
 

@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۱۷ — جستجو در فایل‌ها
 ### Chapter 17 – Searching for Files
 

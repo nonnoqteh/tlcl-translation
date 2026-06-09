@@ -1,3 +1,6 @@
+﻿---
+layout: default
+---
 # فصل ۳۶ — موارد خاص
 ### Chapter 36 – Exotica
 
