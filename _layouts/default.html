@@ -264,6 +264,68 @@
       color: var(--green);
     }
 
+    /* ── Source Box ── */
+    .source-box {
+      margin-top: 48px;
+      background: #111820;
+      border: 1px solid var(--border);
+      border-right: 4px solid var(--purple);
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .source-box .source-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .source-box .source-text {
+      flex: 1;
+    }
+
+    .source-box .source-title {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .source-box .source-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .source-box .source-author {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .source-box .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(188,140,255,.1);
+      border: 1px solid var(--purple);
+      border-radius: 6px;
+      padding: 8px 16px;
+      color: var(--purple);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: all .2s;
+      flex-shrink: 0;
+    }
+
+    .source-box .source-link:hover {
+      background: rgba(188,140,255,.2);
+    }
+
     /* scrollbar */
     ::-webkit-scrollbar { width: 8px; height: 8px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
@@ -294,6 +356,19 @@
     <article class="content">
       {{ content }}
     </article>
+
+    <!-- Source reference -->
+    <div class="source-box">
+      <div class="source-icon">📖</div>
+      <div class="source-text">
+        <div class="source-title">این ترجمه بر اساس منبع اصلی</div>
+        <div class="source-name">The Linux Command Line — 6th Internet Edition</div>
+        <div class="source-author">نوشته‌ی William E. Shotts, Jr. &nbsp;|&nbsp; لایسنس: CC BY-NC-ND 3.0</div>
+      </div>
+      <a class="source-link" href="https://linuxcommand.org/tlcl.php" target="_blank" rel="noopener">
+        📥 دانلود رایگان ↗
+      </a>
+    </div>
 
     <div class="chapter-nav">
       <a class="nav-btn" href="javascript:history.back()">← بازگشت</a>
