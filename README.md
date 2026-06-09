@@ -37,7 +37,7 @@ tlcl-translation/
 
 | فصل | عنوان اصلی | فارسی | کوردی-سورانی | وضعیت |
 |-----|------------|-------|--------------|--------|
-| مقدمه | Introduction | مقدمه | پێشەکی | ✅ |
+| مقدمه | Introduction | [مقدمه](./fa/chapters/ch00-introduction.md) | پێشەکی | ✅ |
 | 1 | What Is the Shell? | شل چیست؟ | شێل چییە؟ | ⬜ |
 | 2 | Navigation | ناوبری | گەڕان | ⬜ |
 | 3 | Exploring the System | کاوش در سیستم | گەڕانەوەی سیستەم | ⬜ |
