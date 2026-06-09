@@ -320,18 +320,10 @@
       border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       padding: 0 20px;
       gap: 12px;
       z-index: 200;
-    }
-
-    .search-logo {
-      color: var(--green);
-      font-weight: 700;
-      font-size: 15px;
-      text-decoration: none;
-      white-space: nowrap;
-      flex-shrink: 0;
     }
 
     .search-wrap {
@@ -426,12 +418,11 @@
 
 <!-- ══ SEARCH BAR ══ -->
 <div class="search-bar">
-  <a class="search-logo" href="#">🐧 TLCL</a>
   <div class="search-wrap">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
     </svg>
-    <input id="search-input" type="search" placeholder="جستجوی فصل یا موضوع..." autocomplete="off" />
+    <input id="search-input" type="search" placeholder="" autocomplete="off" />
     <button id="search-clear" title="پاک کردن">✕</button>
   </div>
   <span id="search-count"></span>
