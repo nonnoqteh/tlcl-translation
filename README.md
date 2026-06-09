@@ -62,6 +62,8 @@ tlcl-translation/
 | 19 | Regular Expressions | [عبارات باقاعده](./fa/chapters/ch19-regular-expressions.md) | دەقی ئایەتی | ✅ FA |
 | 20 | Text Processing | [پردازش متن](./fa/chapters/ch20-text-processing.md) | پرۆسێسکردنی دەق | ✅ FA |
 | 21 | Formatting Output | [قالب‌بندی خروجی](./fa/chapters/ch21-formatting-output.md) | فۆرماتکردنی ئاوتپوت | ✅ FA |
+| 22 | Printing | [چاپ](./fa/chapters/ch22-printing.md) | چاپکردن | ✅ FA |
+| 23 | Compiling Programs | [کامپایل کردن برنامه‌ها](./fa/chapters/ch23-compiling-programs.md) | کۆمپایڵکردنی بەرنامەکان | ✅ FA |
 
 > وضعیت: ✅ تکمیل (هر دو زبان) | ✅ FA فارسی تکمیل | 🔄 در حال ترجمه | ⬜ شروع نشده
 
