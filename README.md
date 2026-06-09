@@ -64,8 +64,22 @@ tlcl-translation/
 | 21 | Formatting Output | [قالب‌بندی خروجی](./fa/chapters/ch21-formatting-output.md) | [فۆرماتکردنی ئاوتپوت](./ckb/chapters/ch21-formatting-output.md) | ✅ |
 | 22 | Printing | [چاپ](./fa/chapters/ch22-printing.md) | [چاپکردن](./ckb/chapters/ch22-printing.md) | ✅ |
 | 23 | Compiling Programs | [کامپایل کردن برنامه‌ها](./fa/chapters/ch23-compiling-programs.md) | [کۆمپایڵکردنی بەرنامەکان](./ckb/chapters/ch23-compiling-programs.md) | ✅ |
+| **پارت ۴ — نوشتن اسکریپت‌های شل \| پارتی چوار — نووسینی ئیسکریپتی شێل** | | | | |
+| 24 | Writing Your First Script | [نوشتن اولین اسکریپت](./fa/chapters/ch24-writing-your-first-script.md) | | ✅ FA |
+| 25 | Starting a Project | [شروع یک پروژه](./fa/chapters/ch25-starting-a-project.md) | | ✅ FA |
+| 26 | Top-Down Design | [طراحی از بالا به پایین](./fa/chapters/ch26-top-down-design.md) | | ✅ FA |
+| 27 | Flow Control: Branching with if | [کنترل جریان: شاخه‌بندی با if](./fa/chapters/ch27-flow-control-branching-with-if.md) | | ✅ FA |
+| 28 | Reading Keyboard Input | [خواندن ورودی از صفحه‌کلید](./fa/chapters/ch28-reading-keyboard-input.md) | | ✅ FA |
+| 29 | Flow Control: Looping with while/until | [کنترل جریان: حلقه با while/until](./fa/chapters/ch29-flow-control-looping-with-while-until.md) | | ✅ FA |
+| 30 | Troubleshooting | [رفع اشکال](./fa/chapters/ch30-troubleshooting.md) | | ✅ FA |
+| 31 | Flow Control: Branching with case | [کنترل جریان: شاخه‌بندی با case](./fa/chapters/ch31-flow-control-branching-with-case.md) | | ✅ FA |
+| 32 | Positional Parameters | [پارامترهای موضعی](./fa/chapters/ch32-positional-parameters.md) | | ✅ FA |
+| 33 | Flow Control: Looping with for | [کنترل جریان: حلقه با for](./fa/chapters/ch33-flow-control-looping-with-for.md) | | ✅ FA |
+| 34 | Strings and Numbers | [رشته‌ها و اعداد](./fa/chapters/ch34-strings-and-numbers.md) | | ✅ FA |
+| 35 | Arrays | [آرایه‌ها](./fa/chapters/ch35-arrays.md) | | ✅ FA |
+| 36 | Exotica | [موارد خاص](./fa/chapters/ch36-exotica.md) | | ✅ FA |
 
-> وضعیت: ✅ تکمیل (هر دو زبان) | 🔄 در حال ترجمه | ⬜ شروع نشده
+> وضعیت: ✅ تکمیل (هر دو زبان) | ✅ FA فارسی تکمیل | 🔄 در حال ترجمه | ⬜ شروع نشده
 
 ---
 
