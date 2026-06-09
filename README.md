@@ -92,6 +92,7 @@ tlcl-translation/
 - **نویسنده:** William E. Shotts, Jr.
 - **وبسایت:** [linuxcommand.org](https://linuxcommand.org)
 - **لایسنس اصلی:** Creative Commons Attribution-Noncommercial-No Derivative Works 3.0
+- **دانلود PDF:** [TLCL-6th-edition.pdf](./TLCL-6th-edition.pdf)
 
 > این ترجمه صرفاً برای اهداف آموزشی غیرتجاری است.  
 > ئەم وەرگێڕانە تەنها بۆ مەبەستی فێرکاری نابازرگانییە.
