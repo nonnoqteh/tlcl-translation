@@ -108,6 +108,7 @@ tlcl-translation/
 
 <div align="center">
 
-با ❤️ ترجمه شده.
+با ❤️ ترجمه شده.  
+بە ❤️ وەرگێڕدراوە.
 
 </div>
