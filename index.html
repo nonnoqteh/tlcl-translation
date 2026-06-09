@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ترجمه‌ی خط فرمان لینوکس</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --green: #3fb950;
+      --green-dim: #1a4a27;
+      --blue: #58a6ff;
+      --purple: #bc8cff;
+      --orange: #ffa657;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --red: #f85149;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Vazirmatn', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #0d1117 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 20px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(63,185,80,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .terminal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-dim);
+      border: 1px solid var(--green);
+      border-radius: 20px;
+      padding: 4px 16px;
+      font-size: 13px;
+      color: var(--green);
+      margin-bottom: 24px;
+    }
+    .terminal-badge::before { content: '●'; font-size: 10px; }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span { color: var(--green); }
+
+    .hero-sub {
+      font-size: clamp(14px, 2.5vw, 18px);
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .hero-author {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+    .hero-author strong { color: var(--blue); }
+
+    /* terminal window */
+    .terminal {
+      display: inline-block;
+      background: #010409;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0;
+      width: min(560px, 90vw);
+      text-align: right;
+      box-shadow: 0 24px 80px rgba(0,0,0,.5);
+      overflow: hidden;
+    }
+
+    .terminal-bar {
+      background: #21262d;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-r { background: #f85149; }
+    .dot-y { background: #d29922; }
+    .dot-g { background: #3fb950; }
+    .t-title { margin-right: auto; font-size: 12px; color: var(--text-muted); }
+
+    .terminal-body {
+      padding: 20px 24px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      text-align: left;
+      direction: ltr;
+      line-height: 2;
+    }
+
+    .t-prompt { color: var(--green); }
+    .t-cmd { color: var(--text); }
+    .t-out { color: var(--text-muted); }
+    .t-hi { color: var(--orange); }
+    .t-cursor {
+      display: inline-block;
+      width: 9px; height: 16px;
+      background: var(--green);
+      animation: blink 1s step-end infinite;
+      vertical-align: middle;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* ── Langs ── */
+    .langs {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid;
+      transition: all .2s;
+      font-family: 'Vazirmatn', sans-serif;
+    }
+
+    .lang-btn.fa {
+      background: rgba(88,166,255,.1);
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+    .lang-btn.fa:hover { background: rgba(88,166,255,.2); transform: translateY(-2px); }
+
+    .lang-btn.ckb {
+      background: rgba(188,140,255,.1);
+      border-color: var(--purple);
+      color: var(--purple);
+    }
+    .lang-btn.ckb:hover { background: rgba(188,140,255,.2); transform: translateY(-2px); }
+
+    /* ── Main ── */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    /* ── Stats ── */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--green);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ── Parts ── */
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .part {
+      margin-bottom: 48px;
+    }
+
+    .part-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px 10px 0 0;
+      padding: 14px 20px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .part-num {
+      background: var(--green-dim);
+      color: var(--green);
+      border-radius: 6px;
+      padding: 2px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .part-ckb {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .chapters {
+      border: 1px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      overflow: hidden;
+    }
+
+    .ch-row {
+      display: grid;
+      grid-template-columns: 40px 1fr 1fr 1fr;
+      align-items: center;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--border);
+      transition: background .15s;
+      gap: 12px;
+    }
+    .ch-row:last-child { border-bottom: none; }
+    .ch-row:hover { background: var(--surface); }
+
+    .ch-num {
+      color: var(--text-muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .ch-en {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .ch-link {
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color .15s;
+    }
+
+    .ch-link.fa { color: var(--blue); }
+    .ch-link.fa:hover { color: #79baff; }
+    .ch-link.ckb { color: var(--purple); }
+    .ch-link.ckb:hover { color: #d0adff; }
+    .ch-link.soon { color: var(--text-muted); font-size: 12px; pointer-events: none; }
+
+    .col-header {
+      display: grid;
+      grid-template-columns: 40px 1fr 1fr 1fr;
+      gap: 12px;
+      padding: 8px 20px;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      border: 1px solid var(--border);
+      border-top: none;
+      background: #0d1117;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    footer a { color: var(--blue); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .heart { color: var(--red); }
+
+    @media (max-width: 600px) {
+      .ch-row, .col-header {
+        grid-template-columns: 30px 1fr 1fr;
+      }
+      .ch-en { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="terminal-badge">پروژه‌ی ترجمه‌ی آموزشی</div>
+
+  <h1>🐧 <span>خط فرمان لینوکس</span></h1>
+  <p class="hero-sub">The Linux Command Line — 6th Internet Edition</p>
+  <p class="hero-author">نوشته‌ی <strong>William Shotts</strong> — ترجمه توسط <strong>نوید دادور</strong></p>
+
+  <div class="terminal">
+    <div class="terminal-bar">
+      <span class="dot dot-r"></span>
+      <span class="dot dot-y"></span>
+      <span class="dot dot-g"></span>
+      <span class="t-title">bash — tlcl-translation</span>
+    </div>
+    <div class="terminal-body">
+      <div><span class="t-prompt">nawid@linux:~$</span> <span class="t-cmd">cat README.md | head -5</span></div>
+      <div class="t-out"># ترجمه‌ی «خط فرمان لینوکس»</div>
+      <div class="t-out">زبان: <span class="t-hi">فارسی</span> و <span class="t-hi">کوردی-سورانی</span></div>
+      <div class="t-out">فصل‌ها: <span class="t-hi">۳۶ فصل</span> — پارت ۱ تا ۴</div>
+      <div><span class="t-prompt">nawid@linux:~$</span> <span class="t-cursor"></span></div>
+    </div>
+  </div>
+
+  <div class="langs">
+    <a class="lang-btn fa" href="fa/chapters/ch00-introduction.md">📘 شروع به خواندن — فارسی</a>
+    <a class="lang-btn ckb" href="ckb/chapters/ch00-introduction.md">📗 دەست پێبکە — کوردی سۆرانی</a>
+  </div>
+</section>
+
+<!-- ══ MAIN ══ -->
+<main class="container">
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat-card">
+      <span class="stat-num">۳۶</span>
+      <div class="stat-label">فصل ترجمه‌شده</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">۲</span>
+      <div class="stat-label">زبان</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">۴</span>
+      <div class="stat-label">پارت</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">١٠٠٪</span>
+      <div class="stat-label">فارسی تکمیل</div>
+    </div>
+  </div>
+
+  <h2 class="section-title">📚 فهرست فصل‌ها</h2>
+
+  <!-- مقدمه -->
+  <div class="part">
+    <div class="part-header">
+      <span class="part-num">مقدمه</span>
+      Introduction
+      <span class="part-ckb">| پێشەکی</span>
+    </div>
+    <div class="col-header">
+      <span>#</span><span>English</span><span>فارسی</span><span>کوردی</span>
+    </div>
+    <div class="chapters">
+      <div class="ch-row">
+        <span class="ch-num">٠٠</span>
+        <span class="ch-en">Introduction</span>
+        <a class="ch-link fa" href="fa/chapters/ch00-introduction.md">📄 مقدمه</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch00-introduction.md">📄 پێشەکی</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- پارت ۱ -->
+  <div class="part">
+    <div class="part-header">
+      <span class="part-num">پارت ۱</span>
+      Learning the Shell — یادگیری شل
+      <span class="part-ckb">| فێربوونی شێل</span>
+    </div>
+    <div class="col-header">
+      <span>#</span><span>English</span><span>فارسی</span><span>کوردی</span>
+    </div>
+    <div class="chapters">
+      <div class="ch-row">
+        <span class="ch-num">١</span>
+        <span class="ch-en">What Is the Shell?</span>
+        <a class="ch-link fa" href="fa/chapters/ch01-what-is-the-shell.md">شل چیست؟</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch01-what-is-the-shell.md">شێل چییە؟</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٢</span>
+        <span class="ch-en">Navigation</span>
+        <a class="ch-link fa" href="fa/chapters/ch02-navigation.md">ناوبری</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch02-navigation.md">گەڕان</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٣</span>
+        <span class="ch-en">Exploring the System</span>
+        <a class="ch-link fa" href="fa/chapters/ch03-exploring-the-system.md">کاوش در سیستم</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch03-exploring-the-system.md">گەڕانەوەی سیستەم</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٤</span>
+        <span class="ch-en">Manipulating Files</span>
+        <a class="ch-link fa" href="fa/chapters/ch04-manipulating-files.md">کار با فایل‌ها</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch04-manipulating-files.md">کارکردن لەگەڵ فایل</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٥</span>
+        <span class="ch-en">Working with Commands</span>
+        <a class="ch-link fa" href="fa/chapters/ch05-working-with-commands.md">کار با دستورها</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch05-working-with-commands.md">کارکردن لەگەڵ فەرمانەکان</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٦</span>
+        <span class="ch-en">Redirection</span>
+        <a class="ch-link fa" href="fa/chapters/ch06-redirection.md">تغییر مسیر</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch06-redirection.md">ئاڕاستەکردنەوە</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٧</span>
+        <span class="ch-en">Seeing the World as the Shell</span>
+        <a class="ch-link fa" href="fa/chapters/ch07-seeing-the-world-as-shell.md">دنیا از چشم شل</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch07-seeing-the-world-as-shell.md">جیهان لە چاوی شێل</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٨</span>
+        <span class="ch-en">Advanced Keyboard Tricks</span>
+        <a class="ch-link fa" href="fa/chapters/ch08-advanced-keyboard.md">ترفندهای صفحه‌کلید</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch08-advanced-keyboard.md">ئامرازی پەرەپێدراوی کیبۆرد</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٩</span>
+        <span class="ch-en">Permissions</span>
+        <a class="ch-link fa" href="fa/chapters/ch09-permissions.md">مجوزها</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch09-permissions.md">مۆڵەتەکان</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">١٠</span>
+        <span class="ch-en">Processes</span>
+        <a class="ch-link fa" href="fa/chapters/ch10-processes.md">فرآیندها</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch10-processes.md">پرۆسەکان</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- پارت ۲ -->
+  <div class="part">
+    <div class="part-header">
+      <span class="part-num">پارت ۲</span>
+      Configuration &amp; the Environment — پیکربندی و محیط
+      <span class="part-ckb">| ڕێکخستن و ژینگە</span>
+    </div>
+    <div class="col-header">
+      <span>#</span><span>English</span><span>فارسی</span><span>کوردی</span>
+    </div>
+    <div class="chapters">
+      <div class="ch-row">
+        <span class="ch-num">١١</span>
+        <span class="ch-en">The Environment</span>
+        <a class="ch-link fa" href="fa/chapters/ch11-the-environment.md">محیط</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch11-the-environment.md">ژینگە</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">١٢</span>
+        <span class="ch-en">A Gentle Introduction to vi</span>
+        <a class="ch-link fa" href="fa/chapters/ch12-a-gentle-introduction-to-vi.md">آشنایی با vi</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch12-a-gentle-introduction-to-vi.md">ناساندنی vi</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">١٣</span>
+        <span class="ch-en">Customizing the Prompt</span>
+        <a class="ch-link fa" href="fa/chapters/ch13-customizing-the-prompt.md">سفارشی‌سازی پرامپت</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch13-customizing-the-prompt.md">دیزاینکردنی پرامپت</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- پارت ۳ -->
+  <div class="part">
+    <div class="part-header">
+      <span class="part-num">پارت ۳</span>
+      Common Tasks &amp; Tools — ابزارهای اساسی
+      <span class="part-ckb">| ئامرازە بنچینەیییەکان</span>
+    </div>
+    <div class="col-header">
+      <span>#</span><span>English</span><span>فارسی</span><span>کوردی</span>
+    </div>
+    <div class="chapters">
+      <div class="ch-row">
+        <span class="ch-num">١٤</span>
+        <span class="ch-en">Package Management</span>
+        <a class="ch-link fa" href="fa/chapters/ch14-package-management.md">مدیریت بسته</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch14-package-management.md">بەڕێوەبردنی پاکێج</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">١٥</span>
+        <span class="ch-en">Storage Media</span>
+        <a class="ch-link fa" href="fa/chapters/ch15-storage-media.md">رسانه‌ی ذخیره‌سازی</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch15-storage-media.md">میدیای ستۆرکردن</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">١٦</span>
+        <span class="ch-en">Networking</span>
+        <a class="ch-link fa" href="fa/chapters/ch16-networking.md">شبکه</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch16-networking.md">تۆڕبەندی</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">١٧</span>
+        <span class="ch-en">Searching for Files</span>
+        <a class="ch-link fa" href="fa/chapters/ch17-searching-for-files.md">جستجو در فایل‌ها</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch17-searching-for-files.md">گەڕان لە فایلەکان</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">١٨</span>
+        <span class="ch-en">Archiving and Backup</span>
+        <a class="ch-link fa" href="fa/chapters/ch18-archiving-and-backup.md">آرشیو و پشتیبان‌گیری</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch18-archiving-and-backup.md">ئەرشیڤ و پشتیوانی</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">١٩</span>
+        <span class="ch-en">Regular Expressions</span>
+        <a class="ch-link fa" href="fa/chapters/ch19-regular-expressions.md">عبارات باقاعده</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch19-regular-expressions.md">دەقی ئایەتی</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٢٠</span>
+        <span class="ch-en">Text Processing</span>
+        <a class="ch-link fa" href="fa/chapters/ch20-text-processing.md">پردازش متن</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch20-text-processing.md">پرۆسێسکردنی دەق</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٢١</span>
+        <span class="ch-en">Formatting Output</span>
+        <a class="ch-link fa" href="fa/chapters/ch21-formatting-output.md">قالب‌بندی خروجی</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch21-formatting-output.md">فۆرماتکردنی ئاوتپوت</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٢٢</span>
+        <span class="ch-en">Printing</span>
+        <a class="ch-link fa" href="fa/chapters/ch22-printing.md">چاپ</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch22-printing.md">چاپکردن</a>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٢٣</span>
+        <span class="ch-en">Compiling Programs</span>
+        <a class="ch-link fa" href="fa/chapters/ch23-compiling-programs.md">کامپایل برنامه‌ها</a>
+        <a class="ch-link ckb" href="ckb/chapters/ch23-compiling-programs.md">کۆمپایڵکردنی بەرنامەکان</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- پارت ۴ -->
+  <div class="part">
+    <div class="part-header">
+      <span class="part-num">پارت ۴</span>
+      Writing Shell Scripts — نوشتن اسکریپت‌های شل
+      <span class="part-ckb">| نووسینی ئیسکریپتی شێل</span>
+    </div>
+    <div class="col-header">
+      <span>#</span><span>English</span><span>فارسی</span><span>کوردی</span>
+    </div>
+    <div class="chapters">
+      <div class="ch-row">
+        <span class="ch-num">٢٤</span>
+        <span class="ch-en">Writing Your First Script</span>
+        <a class="ch-link fa" href="fa/chapters/ch24-writing-your-first-script.md">اولین اسکریپت</a>
+        <span class="ch-link soon">به‌زودی…</span>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٢٥</span>
+        <span class="ch-en">Starting a Project</span>
+        <a class="ch-link fa" href="fa/chapters/ch25-starting-a-project.md">شروع یک پروژه</a>
+        <span class="ch-link soon">به‌زودی…</span>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٢٦</span>
+        <span class="ch-en">Top-Down Design</span>
+        <a class="ch-link fa" href="fa/chapters/ch26-top-down-design.md">طراحی از بالا به پایین</a>
+        <span class="ch-link soon">به‌زودی…</span>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٢٧</span>
+        <span class="ch-en">Flow Control: if</span>
+        <a class="ch-link fa" href="fa/chapters/ch27-flow-control-branching-with-if.md">شاخه‌بندی با if</a>
+        <span class="ch-link soon">به‌زودی…</span>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٢٨</span>
+        <span class="ch-en">Reading Keyboard Input</span>
+        <a class="ch-link fa" href="fa/chapters/ch28-reading-keyboard-input.md">ورودی از صفحه‌کلید</a>
+        <span class="ch-link soon">به‌زودی…</span>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٢٩</span>
+        <span class="ch-en">Flow Control: while/until</span>
+        <a class="ch-link fa" href="fa/chapters/ch29-flow-control-looping-with-while-until.md">حلقه با while/until</a>
+        <span class="ch-link soon">به‌زودی…</span>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٣٠</span>
+        <span class="ch-en">Troubleshooting</span>
+        <a class="ch-link fa" href="fa/chapters/ch30-troubleshooting.md">رفع اشکال</a>
+        <span class="ch-link soon">به‌زودی…</span>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٣١</span>
+        <span class="ch-en">Flow Control: case</span>
+        <a class="ch-link fa" href="fa/chapters/ch31-flow-control-branching-with-case.md">شاخه‌بندی با case</a>
+        <span class="ch-link soon">به‌زودی…</span>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٣٢</span>
+        <span class="ch-en">Positional Parameters</span>
+        <a class="ch-link fa" href="fa/chapters/ch32-positional-parameters.md">پارامترهای موضعی</a>
+        <span class="ch-link soon">به‌زودی…</span>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٣٣</span>
+        <span class="ch-en">Flow Control: for</span>
+        <a class="ch-link fa" href="fa/chapters/ch33-flow-control-looping-with-for.md">حلقه با for</a>
+        <span class="ch-link soon">به‌زودی…</span>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٣٤</span>
+        <span class="ch-en">Strings and Numbers</span>
+        <a class="ch-link fa" href="fa/chapters/ch34-strings-and-numbers.md">رشته‌ها و اعداد</a>
+        <span class="ch-link soon">به‌زودی…</span>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٣٥</span>
+        <span class="ch-en">Arrays</span>
+        <a class="ch-link fa" href="fa/chapters/ch35-arrays.md">آرایه‌ها</a>
+        <span class="ch-link soon">به‌زودی…</span>
+      </div>
+      <div class="ch-row">
+        <span class="ch-num">٣٦</span>
+        <span class="ch-en">Exotica</span>
+        <a class="ch-link fa" href="fa/chapters/ch36-exotica.md">موارد خاص</a>
+        <span class="ch-link soon">به‌زودی…</span>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p>
+    بر اساس کتاب
+    <a href="https://linuxcommand.org/tlcl.php" target="_blank">The Linux Command Line</a>
+    نوشته‌ی <strong>William E. Shotts, Jr.</strong>
+  </p>
+  <p style="margin-top:8px;">
+    لایسنس:
+    <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">CC BY-NC-ND 3.0</a>
+    &nbsp;|&nbsp;
+    <a href="https://github.com/nonnoqteh/tlcl-translation" target="_blank">GitHub ↗</a>
+  </p>
+  <p style="margin-top:16px; font-size:18px;">
+    با <span class="heart">❤️</span> ترجمه شده. &nbsp; بە <span class="heart">❤️</span> وەرگێڕدراوە.
+  </p>
+</footer>
+
+</body>
+</html>
