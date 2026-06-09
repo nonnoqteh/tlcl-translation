@@ -1,0 +1,21 @@
+title: "ترجمه‌ی خط فرمان لینوکس | وەرگێڕانی هێڵی فەرمانی لینوکس"
+description: "ترجمه‌ی فارسی و کوردی-سورانی کتاب The Linux Command Line نوشته‌ی William Shotts"
+baseurl: "/tlcl-translation"
+url: "https://nonnoqteh.github.io"
+
+theme: minima
+
+lang: fa
+
+author:
+  name: Nawid Dadwar
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
