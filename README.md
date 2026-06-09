@@ -49,7 +49,7 @@ tlcl-translation/
 | 8 | Advanced Keyboard Tricks | [ترفندهای پیشرفته‌ی صفحه‌کلید](./fa/chapters/ch08-advanced-keyboard.md) | [ئامرازی پەرەپێدراوی کیبۆرد](./ckb/chapters/ch08-advanced-keyboard.md) | ✅ |
 | 9 | Permissions | [مجوزها](./fa/chapters/ch09-permissions.md) | [مۆڵەتەکان](./ckb/chapters/ch09-permissions.md) | ✅ |
 | 10 | Processes | [فرآیندها](./fa/chapters/ch10-processes.md) | [پرۆسەکان](./ckb/chapters/ch10-processes.md) | ✅ |
-| **پارت ۲ — پیکربندی و محیط** | | | | |
+| **پارت ۲ — پیکربندی و محیط \| پارتی دووەم — ڕێکخستن و ژینگە** | | | | |
 | 11 | The Environment | [محیط](./fa/chapters/ch11-the-environment.md) | [ژینگە](./ckb/chapters/ch11-the-environment.md) | ✅ |
 | 12 | A Gentle Introduction to vi | [آشنایی با vi](./fa/chapters/ch12-a-gentle-introduction-to-vi.md) | [ناساندنی vi](./ckb/chapters/ch12-a-gentle-introduction-to-vi.md) | ✅ |
 | 13 | Customizing the Prompt | [سفارشی‌سازی پرامپت](./fa/chapters/ch13-customizing-the-prompt.md) | [دیزاینکردنی پرامپت](./ckb/chapters/ch13-customizing-the-prompt.md) | ✅ |
