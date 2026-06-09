@@ -176,4 +176,4 @@ done < <(ls -la)
 
 ---
 
-*فصل بعدی: [فصل ۳۰ — رفع اشکال](ch30-troubleshooting.md)*
+*فصل بعدی: [فصل ۳۰ — رفع اشکال](ch30-troubleshooting)*

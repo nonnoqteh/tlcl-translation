@@ -310,4 +310,4 @@ alias ls='ls --color=tty'
 
 ---
 
-*فصل بعدی: [فصل ۶ — تغییر مسیر](ch06-redirection.md)*
+*فصل بعدی: [فصل ۶ — تغییر مسیر](ch06-redirection)*

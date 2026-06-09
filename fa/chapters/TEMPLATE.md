@@ -73,4 +73,4 @@ echo "سلام، $NAME!"
 
 ---
 
-*فصل بعدی: [عنوان فصل بعدی](chXX-next-chapter.md)*
+*فصل بعدی: [عنوان فصل بعدی](chXX-next-chapter)*

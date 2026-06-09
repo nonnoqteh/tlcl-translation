@@ -181,4 +181,4 @@ http://localhost:631
 
 ---
 
-*فصل بعدی: [فصل ۲۳ — کامپایل کردن برنامه](ch23-compiling-programs.md)*
+*فصل بعدی: [فصل ۲۳ — کامپایل کردن برنامه](ch23-compiling-programs)*

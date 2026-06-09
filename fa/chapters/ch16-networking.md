@@ -255,4 +255,4 @@ ssh-copy-id user@remote-sys
 
 ---
 
-*فصل بعدی: [فصل ۱۷ — جستجو در فایل‌ها](ch17-searching-for-files.md)*
+*فصل بعدی: [فصل ۱۷ — جستجو در فایل‌ها](ch17-searching-for-files)*

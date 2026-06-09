@@ -201,4 +201,4 @@ source ~/.bashrc
 
 ---
 
-*فصل بعدی: [فصل ۱۲ — آشنایی با vi](ch12-a-gentle-introduction-to-vi.md)*
+*فصل بعدی: [فصل ۱۲ — آشنایی با vi](ch12-a-gentle-introduction-to-vi)*

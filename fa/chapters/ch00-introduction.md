@@ -175,4 +175,4 @@ Ala'a Ali, Mikey Barboza, Emanuele Bernardi, Andreas Bjørnestad, Richard Cooke,
 
 ---
 
-*بخش بعدی: [فصل ۱ — شل چیست؟](ch01-what-is-the-shell.md)*
+*بخش بعدی: [فصل ۱ — شل چیست؟](ch01-what-is-the-shell)*

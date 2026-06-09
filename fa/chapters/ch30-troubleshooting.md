@@ -168,4 +168,4 @@ echo "Error: something went wrong" >&2
 
 ---
 
-*فصل بعدی: [فصل ۳۱ — کنترل جریان: شاخه‌بندی با case](ch31-flow-control-branching-with-case.md)*
+*فصل بعدی: [فصل ۳۱ — کنترل جریان: شاخه‌بندی با case](ch31-flow-control-branching-with-case)*

@@ -142,4 +142,4 @@ lrwxrwxrwx  1 root root    7 2025-01-01 /lib -> usr/lib
 
 ---
 
-*بابەتی داهاتوو: [بابەتی ٤ — کارکردن لەگەڵ فایل و فۆڵدەر](ch04-manipulating-files.md)*
+*بابەتی داهاتوو: [بابەتی ٤ — کارکردن لەگەڵ فایل و فۆڵدەر](ch04-manipulating-files)*

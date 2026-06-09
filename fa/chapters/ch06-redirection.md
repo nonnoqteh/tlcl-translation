@@ -331,4 +331,4 @@ gzip
 
 ---
 
-*فصل بعدی: [فصل ۷ — دیدن دنیا از چشم شل](ch07-seeing-the-world-as-shell.md)*
+*فصل بعدی: [فصل ۷ — دیدن دنیا از چشم شل](ch07-seeing-the-world-as-shell)*

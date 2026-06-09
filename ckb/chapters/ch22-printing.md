@@ -147,4 +147,4 @@ sudo lpadmin -p MyPrinter -E -v socket://192.168.1.100 -m everywhere
 
 ---
 
-*بابەتی داهاتوو: [بابەتی ٢٣ — کۆمپایڵکردنی بەرنامەکان](ch23-compiling-programs.md)*
+*بابەتی داهاتوو: [بابەتی ٢٣ — کۆمپایڵکردنی بەرنامەکان](ch23-compiling-programs)*

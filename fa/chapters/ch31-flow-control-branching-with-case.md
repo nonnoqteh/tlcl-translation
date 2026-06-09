@@ -156,4 +156,4 @@ esac
 
 ---
 
-*فصل بعدی: [فصل ۳۲ — پارامترهای موضعی](ch32-positional-parameters.md)*
+*فصل بعدی: [فصل ۳۲ — پارامترهای موضعی](ch32-positional-parameters)*

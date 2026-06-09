@@ -205,4 +205,4 @@ $ echo "چند
 
 *پایان پارت ۲*
 
-*بخش بعدی: [پارت ۳ — فصل ۱۴](ch14-package-management.md)*
+*بخش بعدی: [پارت ۳ — فصل ۱۴](ch14-package-management)*

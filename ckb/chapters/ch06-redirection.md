@@ -207,4 +207,4 @@ ls /usr/bin | tee ls.txt | grep zip
 
 ---
 
-*بابەتی داهاتوو: [بابەتی ٧ — جیهان لە چاوی شێلەوە](ch07-seeing-the-world-as-shell.md)*
+*بابەتی داهاتوو: [بابەتی ٧ — جیهان لە چاوی شێلەوە](ch07-seeing-the-world-as-shell)*

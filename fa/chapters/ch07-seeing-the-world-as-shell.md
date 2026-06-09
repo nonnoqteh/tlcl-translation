@@ -451,4 +451,4 @@ sleep 10; echo -e "Time's up\a"
 
 ---
 
-*فصل بعدی: [فصل ۸ — ترفندهای پیشرفته‌ی صفحه‌کلید](ch08-advanced-keyboard.md)*
+*فصل بعدی: [فصل ۸ — ترفندهای پیشرفته‌ی صفحه‌کلید](ch08-advanced-keyboard)*

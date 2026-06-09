@@ -148,4 +148,4 @@ chmod 755 script_info
 
 ---
 
-*فصل بعدی: [فصل ۲۵ — شروع یک پروژه](ch25-starting-a-project.md)*
+*فصل بعدی: [فصل ۲۵ — شروع یک پروژه](ch25-starting-a-project)*

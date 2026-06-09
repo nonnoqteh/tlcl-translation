@@ -115,4 +115,4 @@ layout: default
 
 ---
 
-*بابەتی داهاتوو: [بابەتی ١ — شێل چییە؟](ch01-what-is-the-shell.md)*
+*بابەتی داهاتوو: [بابەتی ١ — شێل چییە؟](ch01-what-is-the-shell)*

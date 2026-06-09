@@ -158,4 +158,4 @@ cd bin
 
 ---
 
-*فصل بعدی: [فصل ۳ — کاوش در سیستم](ch03-exploring-the-system.md)*
+*فصل بعدی: [فصل ۳ — کاوش در سیستم](ch03-exploring-the-system)*

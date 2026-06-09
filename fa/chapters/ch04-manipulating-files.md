@@ -317,4 +317,4 @@ rm -r playground
 
 ---
 
-*فصل بعدی: [فصل ۵ — کار با دستورها](ch05-working-with-commands.md)*
+*فصل بعدی: [فصل ۵ — کار با دستورها](ch05-working-with-commands)*

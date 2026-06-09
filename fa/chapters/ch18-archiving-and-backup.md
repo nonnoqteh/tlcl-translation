@@ -252,4 +252,4 @@ rsync -av --delete /home /media/backup-drive/
 
 ---
 
-*فصل بعدی: [فصل ۱۹ — عبارات باقاعده](ch19-regular-expressions.md)*
+*فصل بعدی: [فصل ۱۹ — عبارات باقاعده](ch19-regular-expressions)*

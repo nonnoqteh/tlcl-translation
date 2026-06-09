@@ -196,4 +196,4 @@ rsync -av --delete /home /media/backup-drive/
 
 ---
 
-*بابەتی داهاتوو: [بابەتی ١٩ — دەقی ئایەتی](ch19-regular-expressions.md)*
+*بابەتی داهاتوو: [بابەتی ١٩ — دەقی ئایەتی](ch19-regular-expressions)*

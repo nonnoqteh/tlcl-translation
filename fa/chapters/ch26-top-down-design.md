@@ -139,4 +139,4 @@ report_disk_space () {
 
 ---
 
-*فصل بعدی: [فصل ۲۷ — کنترل جریان: شاخه‌بندی با if](ch27-flow-control-branching-with-if.md)*
+*فصل بعدی: [فصل ۲۷ — کنترل جریان: شاخه‌بندی با if](ch27-flow-control-branching-with-if)*

@@ -179,4 +179,4 @@ done
 
 ---
 
-*فصل بعدی: [فصل ۳۳ — کنترل جریان: حلقه با for](ch33-flow-control-looping-with-for.md)*
+*فصل بعدی: [فصل ۳۳ — کنترل جریان: حلقه با for](ch33-flow-control-looping-with-for)*

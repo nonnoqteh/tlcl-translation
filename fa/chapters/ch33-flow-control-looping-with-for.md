@@ -157,4 +157,4 @@ done
 
 ---
 
-*فصل بعدی: [فصل ۳۴ — رشته‌ها و اعداد](ch34-strings-and-numbers.md)*
+*فصل بعدی: [فصل ۳۴ — رشته‌ها و اعداد](ch34-strings-and-numbers)*

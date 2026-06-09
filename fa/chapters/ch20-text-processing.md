@@ -280,4 +280,4 @@ awk -F ':' '{print $1}' /etc/passwd   # نام کاربران
 
 ---
 
-*فصل بعدی: [فصل ۲۱ — قالب‌بندی خروجی](ch21-formatting-output.md)*
+*فصل بعدی: [فصل ۲۱ — قالب‌بندی خروجی](ch21-formatting-output)*

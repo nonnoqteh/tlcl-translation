@@ -357,4 +357,4 @@ New UNIX password:
 
 ---
 
-*فصل بعدی: [فصل ۱۰ — فرآیندها](ch10-processes.md)*
+*فصل بعدی: [فصل ۱۰ — فرآیندها](ch10-processes)*

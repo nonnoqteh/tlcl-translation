@@ -185,4 +185,4 @@ source ~/.bashrc
 
 ---
 
-*بابەتی داهاتوو: [بابەتی ١٢ — ناساندنی vi](ch12-a-gentle-introduction-to-vi.md)*
+*بابەتی داهاتوو: [بابەتی ١٢ — ناساندنی vi](ch12-a-gentle-introduction-to-vi)*

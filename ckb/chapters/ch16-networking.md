@@ -195,4 +195,4 @@ ssh-copy-id user@remote-sys
 
 ---
 
-*بابەتی داهاتوو: [بابەتی ١٧ — گەڕان لە فایلەکان](ch17-searching-for-files.md)*
+*بابەتی داهاتوو: [بابەتی ١٧ — گەڕان لە فایلەکان](ch17-searching-for-files)*

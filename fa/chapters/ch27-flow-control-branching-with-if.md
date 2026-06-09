@@ -200,4 +200,4 @@ report_home_space () {
 
 ---
 
-*فصل بعدی: [فصل ۲۸ — خواندن ورودی از صفحه‌کلید](ch28-reading-keyboard-input.md)*
+*فصل بعدی: [فصل ۲۸ — خواندن ورودی از صفحه‌کلید](ch28-reading-keyboard-input)*

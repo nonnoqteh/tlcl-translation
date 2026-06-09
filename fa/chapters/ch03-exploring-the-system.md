@@ -255,4 +255,4 @@ lrwxrwxrwx 1 root root 11 2007-08-11 07:34 libc.so.6 -> libc-2.6.so
 
 ---
 
-*فصل بعدی: [فصل ۴ — کار با فایل‌ها و پوشه‌ها](ch04-manipulating-files.md)*
+*فصل بعدی: [فصل ۴ — کار با فایل‌ها و پوشه‌ها](ch04-manipulating-files)*

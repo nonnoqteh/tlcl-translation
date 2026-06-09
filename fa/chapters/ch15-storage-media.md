@@ -210,4 +210,4 @@ UUID=3c4d...  /home    ext4  defaults  1 2
 
 ---
 
-*فصل بعدی: [فصل ۱۶ — شبکه](ch16-networking.md)*
+*فصل بعدی: [فصل ۱۶ — شبکه](ch16-networking)*
