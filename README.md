@@ -48,8 +48,12 @@ tlcl-translation/
 | 8 | Advanced Keyboard Tricks | [ترفندهای پیشرفته‌ی صفحه‌کلید](./fa/chapters/ch08-advanced-keyboard.md) | [ئامرازی پەرەپێدراوی کیبۆرد](./ckb/chapters/ch08-advanced-keyboard.md) | ✅ |
 | 9 | Permissions | [مجوزها](./fa/chapters/ch09-permissions.md) | [مۆڵەتەکان](./ckb/chapters/ch09-permissions.md) | ✅ |
 | 10 | Processes | [فرآیندها](./fa/chapters/ch10-processes.md) | [پرۆسەکان](./ckb/chapters/ch10-processes.md) | ✅ |
+| **پارت ۲ — پیکربندی و محیط** | | | | |
+| 11 | The Environment | [محیط](./fa/chapters/ch11-the-environment.md) | ژینگە | ✅ FA |
+| 12 | A Gentle Introduction to vi | [آشنایی با vi](./fa/chapters/ch12-a-gentle-introduction-to-vi.md) | ناساندنی vi | ✅ FA |
+| 13 | Customizing the Prompt | [سفارشی‌سازی پرامپت](./fa/chapters/ch13-customizing-the-prompt.md) | دیزاینکردنی پرامپت | ✅ FA |
 
-> وضعیت: ✅ تکمیل | 🔄 در حال ترجمه | ⬜ شروع نشده
+> وضعیت: ✅ تکمیل | ✅ FA فارسی تکمیل | 🔄 در حال ترجمه | ⬜ شروع نشده
 
 ---
 
