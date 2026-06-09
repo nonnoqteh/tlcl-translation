@@ -5,6 +5,13 @@
 **The Linux Command Line** — William Shotts (6th Internet Edition)  
 ترجمه به فارسی و کوردی-سورانی | وەرگێڕان بۆ فارسی و کوردی-سۆرانی
 
+🌐 **[مشاهده‌ی آنلاین | بینینی ئۆنلاین](https://nonnoqteh.github.io/tlcl-translation/)**
+
+![وضعیت](https://img.shields.io/badge/وضعیت-کامل-3fb950?style=flat-square)
+![فصل‌ها](https://img.shields.io/badge/فصل‌ها-۳۶_فصل-58a6ff?style=flat-square)
+![زبان‌ها](https://img.shields.io/badge/زبان‌ها-فارسی_|_کوردی-bc8cff?style=flat-square)
+![لایسنس](https://img.shields.io/badge/لایسنس-CC_BY--NC--ND_3.0-ffa657?style=flat-square)
+
 </div>
 
 ---
@@ -21,89 +28,72 @@
 
 ```
 tlcl-translation/
-├── fa/                  # ترجمه‌ی فارسی
-│   ├── chapters/        # فصل‌ها
-│   └── README.md
-├── ckb/                 # وەرگێڕانی کوردی-سۆرانی
-│   ├── chapters/        # باپەڕەکان
-│   └── README.md
-├── assets/              # تصاویر و فایل‌های مشترک
-└── GLOSSARY.md          # واژه‌نامه | فەرهەنگی تایبەت
+├── fa/
+│   └── chapters/        # ترجمه‌ی فارسی — ۳۷ فصل
+├── ckb/
+│   └── chapters/        # وەرگێڕانی کوردی-سۆرانی — ۳۷ باپەڕە
+├── index.html           # صفحه‌ی اصلی سایت
+└── _layouts/
+    └── default.html     # قالب فصل‌ها
 ```
 
 ---
 
 ## 📚 فصل‌ها | باپەڕەکان
 
-| فصل | عنوان اصلی | فارسی | کوردی-سورانی | وضعیت |
-|-----|------------|-------|--------------|--------|
-| مقدمه | Introduction | [مقدمه](./fa/chapters/ch00-introduction.md) | [پێشەکی](./ckb/chapters/ch00-introduction.md) | ✅ |
-| **پارت ۱ — یادگیری شل \| پارتی یەک — فێربوونی شێل** | | | | |
-| 1 | What Is the Shell? | [شل چیست؟](./fa/chapters/ch01-what-is-the-shell.md) | [شێل چییە؟](./ckb/chapters/ch01-what-is-the-shell.md) | ✅ |
-| 2 | Navigation | [ناوبری](./fa/chapters/ch02-navigation.md) | [گەڕان](./ckb/chapters/ch02-navigation.md) | ✅ |
-| 3 | Exploring the System | [کاوش در سیستم](./fa/chapters/ch03-exploring-the-system.md) | [گەڕانەوەی سیستەم](./ckb/chapters/ch03-exploring-the-system.md) | ✅ |
-| 4 | Manipulating Files and Directories | [کار با فایل‌ها و پوشه‌ها](./fa/chapters/ch04-manipulating-files.md) | [کارکردن لەگەڵ فایل و فۆڵدەر](./ckb/chapters/ch04-manipulating-files.md) | ✅ |
-| 5 | Working with Commands | [کار با دستورها](./fa/chapters/ch05-working-with-commands.md) | [کارکردن لەگەڵ فەرمانەکان](./ckb/chapters/ch05-working-with-commands.md) | ✅ |
-| 6 | Redirection | [تغییر مسیر ورودی/خروجی](./fa/chapters/ch06-redirection.md) | [ئاڕاستەکردنەوە](./ckb/chapters/ch06-redirection.md) | ✅ |
-| 7 | Seeing the World as the Shell Sees It | [دیدن دنیا از چشم شل](./fa/chapters/ch07-seeing-the-world-as-shell.md) | [جیهان لە چاوی شێلەوە](./ckb/chapters/ch07-seeing-the-world-as-shell.md) | ✅ |
-| 8 | Advanced Keyboard Tricks | [ترفندهای پیشرفته‌ی صفحه‌کلید](./fa/chapters/ch08-advanced-keyboard.md) | [ئامرازی پەرەپێدراوی کیبۆرد](./ckb/chapters/ch08-advanced-keyboard.md) | ✅ |
-| 9 | Permissions | [مجوزها](./fa/chapters/ch09-permissions.md) | [مۆڵەتەکان](./ckb/chapters/ch09-permissions.md) | ✅ |
-| 10 | Processes | [فرآیندها](./fa/chapters/ch10-processes.md) | [پرۆسەکان](./ckb/chapters/ch10-processes.md) | ✅ |
-| **پارت ۲ — پیکربندی و محیط \| پارتی دووەم — ڕێکخستن و ژینگە** | | | | |
-| 11 | The Environment | [محیط](./fa/chapters/ch11-the-environment.md) | [ژینگە](./ckb/chapters/ch11-the-environment.md) | ✅ |
-| 12 | A Gentle Introduction to vi | [آشنایی با vi](./fa/chapters/ch12-a-gentle-introduction-to-vi.md) | [ناساندنی vi](./ckb/chapters/ch12-a-gentle-introduction-to-vi.md) | ✅ |
-| 13 | Customizing the Prompt | [سفارشی‌سازی پرامپت](./fa/chapters/ch13-customizing-the-prompt.md) | [دیزاینکردنی پرامپت](./ckb/chapters/ch13-customizing-the-prompt.md) | ✅ |
-| **پارت ۳ — کارهای رایج و ابزارهای اساسی \| پارتی سێ — کارەکانی باوو ئامرازە بنچینەیییەکان** | | | | |
-| 14 | Package Management | [مدیریت بسته](./fa/chapters/ch14-package-management.md) | [بەڕێوەبردنی پاکێج](./ckb/chapters/ch14-package-management.md) | ✅ |
-| 15 | Storage Media | [رسانه‌ی ذخیره‌سازی](./fa/chapters/ch15-storage-media.md) | [میدیای ستۆرکردن](./ckb/chapters/ch15-storage-media.md) | ✅ |
-| 16 | Networking | [شبکه](./fa/chapters/ch16-networking.md) | [تۆڕبەندی](./ckb/chapters/ch16-networking.md) | ✅ |
-| 17 | Searching for Files | [جستجو در فایل‌ها](./fa/chapters/ch17-searching-for-files.md) | [گەڕان لە فایلەکان](./ckb/chapters/ch17-searching-for-files.md) | ✅ |
-| 18 | Archiving and Backup | [آرشیو و پشتیبان‌گیری](./fa/chapters/ch18-archiving-and-backup.md) | [ئەرشیڤ و پشتیوانی](./ckb/chapters/ch18-archiving-and-backup.md) | ✅ |
-| 19 | Regular Expressions | [عبارات باقاعده](./fa/chapters/ch19-regular-expressions.md) | [دەقی ئایەتی](./ckb/chapters/ch19-regular-expressions.md) | ✅ |
-| 20 | Text Processing | [پردازش متن](./fa/chapters/ch20-text-processing.md) | [پرۆسێسکردنی دەق](./ckb/chapters/ch20-text-processing.md) | ✅ |
-| 21 | Formatting Output | [قالب‌بندی خروجی](./fa/chapters/ch21-formatting-output.md) | [فۆرماتکردنی ئاوتپوت](./ckb/chapters/ch21-formatting-output.md) | ✅ |
-| 22 | Printing | [چاپ](./fa/chapters/ch22-printing.md) | [چاپکردن](./ckb/chapters/ch22-printing.md) | ✅ |
-| 23 | Compiling Programs | [کامپایل کردن برنامه‌ها](./fa/chapters/ch23-compiling-programs.md) | [کۆمپایڵکردنی بەرنامەکان](./ckb/chapters/ch23-compiling-programs.md) | ✅ |
-| **پارت ۴ — نوشتن اسکریپت‌های شل \| پارتی چوار — نووسینی ئیسکریپتی شێل** | | | | |
-| 24 | Writing Your First Script | [نوشتن اولین اسکریپت](./fa/chapters/ch24-writing-your-first-script.md) | [نووسینی یەکەم ئیسکریپت](./ckb/chapters/ch24-writing-your-first-script.md) | ✅ |
-| 25 | Starting a Project | [شروع یک پروژه](./fa/chapters/ch25-starting-a-project.md) | [دەستپێکردنی پڕۆژەیەک](./ckb/chapters/ch25-starting-a-project.md) | ✅ |
-| 26 | Top-Down Design | [طراحی از بالا به پایین](./fa/chapters/ch26-top-down-design.md) | [دیزاینی لە سەرەوە بۆ خوارەوە](./ckb/chapters/ch26-top-down-design.md) | ✅ |
-| 27 | Flow Control: Branching with if | [کنترل جریان: شاخه‌بندی با if](./fa/chapters/ch27-flow-control-branching-with-if.md) | [لقبەندی بە if](./ckb/chapters/ch27-flow-control-branching-with-if.md) | ✅ |
-| 28 | Reading Keyboard Input | [خواندن ورودی از صفحه‌کلید](./fa/chapters/ch28-reading-keyboard-input.md) | [خوێندنەوەی تێخستنی کیبۆرد](./ckb/chapters/ch28-reading-keyboard-input.md) | ✅ |
-| 29 | Flow Control: Looping with while/until | [کنترل جریان: حلقه با while/until](./fa/chapters/ch29-flow-control-looping-with-while-until.md) | [سووڕ بە while/until](./ckb/chapters/ch29-flow-control-looping-with-while-until.md) | ✅ |
-| 30 | Troubleshooting | [رفع اشکال](./fa/chapters/ch30-troubleshooting.md) | [چارەسەرکردنی کێشەکان](./ckb/chapters/ch30-troubleshooting.md) | ✅ |
-| 31 | Flow Control: Branching with case | [کنترل جریان: شاخه‌بندی با case](./fa/chapters/ch31-flow-control-branching-with-case.md) | [لقبەندی بە case](./ckb/chapters/ch31-flow-control-branching-with-case.md) | ✅ |
-| 32 | Positional Parameters | [پارامترهای موضعی](./fa/chapters/ch32-positional-parameters.md) | [پارامێتەرەکانی شوێنی](./ckb/chapters/ch32-positional-parameters.md) | ✅ |
-| 33 | Flow Control: Looping with for | [کنترل جریان: حلقه با for](./fa/chapters/ch33-flow-control-looping-with-for.md) | [سووڕ بە for](./ckb/chapters/ch33-flow-control-looping-with-for.md) | ✅ |
-| 34 | Strings and Numbers | [رشته‌ها و اعداد](./fa/chapters/ch34-strings-and-numbers.md) | [ستریمگەکان و ژمارەکان](./ckb/chapters/ch34-strings-and-numbers.md) | ✅ |
-| 35 | Arrays | [آرایه‌ها](./fa/chapters/ch35-arrays.md) | [ئەرەیەکان](./ckb/chapters/ch35-arrays.md) | ✅ |
-| 36 | Exotica | [موارد خاص](./fa/chapters/ch36-exotica.md) | [تایبەتمەندییە تایبەتەکان](./ckb/chapters/ch36-exotica.md) | ✅ |
-
-> وضعیت: ✅ تکمیل (هر دو زبان) | ✅ FA فارسی تکمیل | 🔄 در حال ترجمه | ⬜ شروع نشده
+| # | عنوان اصلی | فارسی | کوردی-سورانی |
+|---|------------|-------|--------------|
+| ٠٠ | Introduction | [مقدمه](./fa/chapters/ch00-introduction.md) | [پێشەکی](./ckb/chapters/ch00-introduction.md) |
+| **پارت ۱** | **Learning the Shell — یادگیری شل \| فێربوونی شێل** | | |
+| ١ | What Is the Shell? | [شل چیست؟](./fa/chapters/ch01-what-is-the-shell.md) | [شێل چییە؟](./ckb/chapters/ch01-what-is-the-shell.md) |
+| ٢ | Navigation | [ناوبری](./fa/chapters/ch02-navigation.md) | [گەڕان](./ckb/chapters/ch02-navigation.md) |
+| ٣ | Exploring the System | [کاوش در سیستم](./fa/chapters/ch03-exploring-the-system.md) | [گەڕانەوەی سیستەم](./ckb/chapters/ch03-exploring-the-system.md) |
+| ٤ | Manipulating Files | [کار با فایل‌ها](./fa/chapters/ch04-manipulating-files.md) | [کارکردن لەگەڵ فایل](./ckb/chapters/ch04-manipulating-files.md) |
+| ٥ | Working with Commands | [کار با دستورها](./fa/chapters/ch05-working-with-commands.md) | [کارکردن لەگەڵ فەرمانەکان](./ckb/chapters/ch05-working-with-commands.md) |
+| ٦ | Redirection | [تغییر مسیر](./fa/chapters/ch06-redirection.md) | [ئاڕاستەکردنەوە](./ckb/chapters/ch06-redirection.md) |
+| ٧ | Seeing the World as the Shell | [دنیا از چشم شل](./fa/chapters/ch07-seeing-the-world-as-shell.md) | [جیهان لە چاوی شێل](./ckb/chapters/ch07-seeing-the-world-as-shell.md) |
+| ٨ | Advanced Keyboard Tricks | [ترفندهای صفحه‌کلید](./fa/chapters/ch08-advanced-keyboard.md) | [ئامرازی پەرەپێدراوی کیبۆرد](./ckb/chapters/ch08-advanced-keyboard.md) |
+| ٩ | Permissions | [مجوزها](./fa/chapters/ch09-permissions.md) | [مۆڵەتەکان](./ckb/chapters/ch09-permissions.md) |
+| ١٠ | Processes | [فرآیندها](./fa/chapters/ch10-processes.md) | [پرۆسەکان](./ckb/chapters/ch10-processes.md) |
+| **پارت ۲** | **Configuration & the Environment — پیکربندی و محیط \| ڕێکخستن و ژینگە** | | |
+| ١١ | The Environment | [محیط](./fa/chapters/ch11-the-environment.md) | [ژینگە](./ckb/chapters/ch11-the-environment.md) |
+| ١٢ | A Gentle Introduction to vi | [آشنایی با vi](./fa/chapters/ch12-a-gentle-introduction-to-vi.md) | [ناساندنی vi](./ckb/chapters/ch12-a-gentle-introduction-to-vi.md) |
+| ١٣ | Customizing the Prompt | [سفارشی‌سازی پرامپت](./fa/chapters/ch13-customizing-the-prompt.md) | [دیزاینکردنی پرامپت](./ckb/chapters/ch13-customizing-the-prompt.md) |
+| **پارت ۳** | **Common Tasks & Tools — ابزارهای اساسی \| ئامرازە بنچینەیییەکان** | | |
+| ١٤ | Package Management | [مدیریت بسته](./fa/chapters/ch14-package-management.md) | [بەڕێوەبردنی پاکێج](./ckb/chapters/ch14-package-management.md) |
+| ١٥ | Storage Media | [رسانه‌ی ذخیره‌سازی](./fa/chapters/ch15-storage-media.md) | [میدیای ستۆرکردن](./ckb/chapters/ch15-storage-media.md) |
+| ١٦ | Networking | [شبکه](./fa/chapters/ch16-networking.md) | [تۆڕبەندی](./ckb/chapters/ch16-networking.md) |
+| ١٧ | Searching for Files | [جستجو در فایل‌ها](./fa/chapters/ch17-searching-for-files.md) | [گەڕان لە فایلەکان](./ckb/chapters/ch17-searching-for-files.md) |
+| ١٨ | Archiving and Backup | [آرشیو و پشتیبان‌گیری](./fa/chapters/ch18-archiving-and-backup.md) | [ئەرشیڤ و پشتیوانی](./ckb/chapters/ch18-archiving-and-backup.md) |
+| ١٩ | Regular Expressions | [عبارات باقاعده](./fa/chapters/ch19-regular-expressions.md) | [دەقی ئایەتی](./ckb/chapters/ch19-regular-expressions.md) |
+| ٢٠ | Text Processing | [پردازش متن](./fa/chapters/ch20-text-processing.md) | [پرۆسێسکردنی دەق](./ckb/chapters/ch20-text-processing.md) |
+| ٢١ | Formatting Output | [قالب‌بندی خروجی](./fa/chapters/ch21-formatting-output.md) | [فۆرماتکردنی ئاوتپوت](./ckb/chapters/ch21-formatting-output.md) |
+| ٢٢ | Printing | [چاپ](./fa/chapters/ch22-printing.md) | [چاپکردن](./ckb/chapters/ch22-printing.md) |
+| ٢٣ | Compiling Programs | [کامپایل برنامه‌ها](./fa/chapters/ch23-compiling-programs.md) | [کۆمپایڵکردنی بەرنامەکان](./ckb/chapters/ch23-compiling-programs.md) |
+| **پارت ۴** | **Writing Shell Scripts — نوشتن اسکریپت‌های شل \| نووسینی ئیسکریپتی شێل** | | |
+| ٢٤ | Writing Your First Script | [اولین اسکریپت](./fa/chapters/ch24-writing-your-first-script.md) | [نووسینی یەکەم ئیسکریپت](./ckb/chapters/ch24-writing-your-first-script.md) |
+| ٢٥ | Starting a Project | [شروع یک پروژه](./fa/chapters/ch25-starting-a-project.md) | [دەستپێکردنی پڕۆژەیەک](./ckb/chapters/ch25-starting-a-project.md) |
+| ٢٦ | Top-Down Design | [طراحی از بالا به پایین](./fa/chapters/ch26-top-down-design.md) | [دیزاینی لە سەرەوە بۆ خوارەوە](./ckb/chapters/ch26-top-down-design.md) |
+| ٢٧ | Flow Control: if | [شاخه‌بندی با if](./fa/chapters/ch27-flow-control-branching-with-if.md) | [لقبەندی بە if](./ckb/chapters/ch27-flow-control-branching-with-if.md) |
+| ٢٨ | Reading Keyboard Input | [ورودی از صفحه‌کلید](./fa/chapters/ch28-reading-keyboard-input.md) | [خوێندنەوەی تێخستنی کیبۆرد](./ckb/chapters/ch28-reading-keyboard-input.md) |
+| ٢٩ | Flow Control: while/until | [حلقه با while/until](./fa/chapters/ch29-flow-control-looping-with-while-until.md) | [سووڕ بە while/until](./ckb/chapters/ch29-flow-control-looping-with-while-until.md) |
+| ٣٠ | Troubleshooting | [رفع اشکال](./fa/chapters/ch30-troubleshooting.md) | [چارەسەرکردنی کێشەکان](./ckb/chapters/ch30-troubleshooting.md) |
+| ٣١ | Flow Control: case | [شاخه‌بندی با case](./fa/chapters/ch31-flow-control-branching-with-case.md) | [لقبەندی بە case](./ckb/chapters/ch31-flow-control-branching-with-case.md) |
+| ٣٢ | Positional Parameters | [پارامترهای موضعی](./fa/chapters/ch32-positional-parameters.md) | [پارامێتەرەکانی شوێنی](./ckb/chapters/ch32-positional-parameters.md) |
+| ٣٣ | Flow Control: for | [حلقه با for](./fa/chapters/ch33-flow-control-looping-with-for.md) | [سووڕ بە for](./ckb/chapters/ch33-flow-control-looping-with-for.md) |
+| ٣٤ | Strings and Numbers | [رشته‌ها و اعداد](./fa/chapters/ch34-strings-and-numbers.md) | [ستریمگەکان و ژمارەکان](./ckb/chapters/ch34-strings-and-numbers.md) |
+| ٣٥ | Arrays | [آرایه‌ها](./fa/chapters/ch35-arrays.md) | [ئەرەیەکان](./ckb/chapters/ch35-arrays.md) |
+| ٣٦ | Exotica | [موارد خاص](./fa/chapters/ch36-exotica.md) | [تایبەتمەندییە تایبەتەکان](./ckb/chapters/ch36-exotica.md) |
 
 ---
 
 ## 🌐 اصول ترجمه | بنچینەکانی وەرگێڕان
 
-### فارسی
-- زبان ساده، روان و آموزش‌محور
-- اصطلاحات فنی اول به فارسی، سپس معادل انگلیسی در پرانتز
-- مثال: `دستور` (command)، `پوشه` (directory)، `فرآیند` (process)
-- از ترجمه‌ی تحت‌اللفظی اجتناب شود؛ مفهوم منتقل شود
+**فارسی** — زبان ساده، روان و آموزش‌محور. اصطلاحات فنی اول به فارسی، سپس معادل انگلیسی در پرانتز.  
+مثال: `دستور` (command)، `پوشه` (directory)، `فرآیند` (process)
 
-### کوردی-سورانی
-- زمانی ئاسان، ڕوون و فێرکاری
-- پەیوەندیدارانی تەکنیکی یەکەم بە کوردی، پاشان هاوتای ئینگلیزی لە کەوانەدا
-- نموونە: `فەرمان` (command)، `بوخچە` (directory)، `پرۆسە` (process)
-
----
-
-## ✍️ مترجم | وەرگێڕ
-
-| زبان | مترجم |
-|------|-------|
-| فارسی | نوید دادور |
-| کوردی-سورانی | نوید دادور |
+**کوردی-سورانی** — زمانی ئاسان، ڕوون و فێرکاری. پەیوەندیدارانی تەکنیکی یەکەم بە کوردی، پاشان هاوتای ئینگلیزی لە کەوانەدا.  
+نموونە: `فەرمان` (command)، `بوخچە` (directory)، `پرۆسە` (process)
 
 ---
 
@@ -112,8 +102,7 @@ tlcl-translation/
 - **کتاب:** The Linux Command Line, 6th Internet Edition
 - **نویسنده:** William E. Shotts, Jr.
 - **وبسایت:** [linuxcommand.org](https://linuxcommand.org)
-- **لایسنس اصلی:** Creative Commons Attribution-Noncommercial-No Derivative Works 3.0
-- **دانلود PDF:** [TLCL-6th-edition.pdf](./TLCL-6th-edition.pdf)
+- **لایسنس:** Creative Commons Attribution-Noncommercial-No Derivative Works 3.0
 
 > این ترجمه صرفاً برای اهداف آموزشی غیرتجاری است.  
 > ئەم وەرگێڕانە تەنها بۆ مەبەستی فێرکاری نابازرگانییە.
@@ -122,7 +111,6 @@ tlcl-translation/
 
 <div align="center">
 
-با ❤️ ترجمه شده.  
-بە ❤️ وەرگێڕدراوە.
+با ❤️ ترجمه شده. &nbsp; بە ❤️ وەرگێڕدراوە.
 
 </div>
