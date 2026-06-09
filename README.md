@@ -54,18 +54,18 @@ tlcl-translation/
 | 12 | A Gentle Introduction to vi | [آشنایی با vi](./fa/chapters/ch12-a-gentle-introduction-to-vi.md) | [ناساندنی vi](./ckb/chapters/ch12-a-gentle-introduction-to-vi.md) | ✅ |
 | 13 | Customizing the Prompt | [سفارشی‌سازی پرامپت](./fa/chapters/ch13-customizing-the-prompt.md) | [دیزاینکردنی پرامپت](./ckb/chapters/ch13-customizing-the-prompt.md) | ✅ |
 | **پارت ۳ — کارهای رایج و ابزارهای اساسی \| پارتی سێ — کارەکانی باوو ئامرازە بنچینەیییەکان** | | | | |
-| 14 | Package Management | [مدیریت بسته](./fa/chapters/ch14-package-management.md) | بەڕێوەبردنی پاکێج | ✅ FA |
-| 15 | Storage Media | [رسانه‌ی ذخیره‌سازی](./fa/chapters/ch15-storage-media.md) | میدیای ستۆرکردن | ✅ FA |
-| 16 | Networking | [شبکه](./fa/chapters/ch16-networking.md) | تۆڕبەندی | ✅ FA |
-| 17 | Searching for Files | [جستجو در فایل‌ها](./fa/chapters/ch17-searching-for-files.md) | گەڕان لە فایلەکان | ✅ FA |
-| 18 | Archiving and Backup | [آرشیو و پشتیبان‌گیری](./fa/chapters/ch18-archiving-and-backup.md) | ئەرشیڤ و پشتیوانی | ✅ FA |
-| 19 | Regular Expressions | [عبارات باقاعده](./fa/chapters/ch19-regular-expressions.md) | دەقی ئایەتی | ✅ FA |
-| 20 | Text Processing | [پردازش متن](./fa/chapters/ch20-text-processing.md) | پرۆسێسکردنی دەق | ✅ FA |
-| 21 | Formatting Output | [قالب‌بندی خروجی](./fa/chapters/ch21-formatting-output.md) | فۆرماتکردنی ئاوتپوت | ✅ FA |
-| 22 | Printing | [چاپ](./fa/chapters/ch22-printing.md) | چاپکردن | ✅ FA |
-| 23 | Compiling Programs | [کامپایل کردن برنامه‌ها](./fa/chapters/ch23-compiling-programs.md) | کۆمپایڵکردنی بەرنامەکان | ✅ FA |
+| 14 | Package Management | [مدیریت بسته](./fa/chapters/ch14-package-management.md) | [بەڕێوەبردنی پاکێج](./ckb/chapters/ch14-package-management.md) | ✅ |
+| 15 | Storage Media | [رسانه‌ی ذخیره‌سازی](./fa/chapters/ch15-storage-media.md) | [میدیای ستۆرکردن](./ckb/chapters/ch15-storage-media.md) | ✅ |
+| 16 | Networking | [شبکه](./fa/chapters/ch16-networking.md) | [تۆڕبەندی](./ckb/chapters/ch16-networking.md) | ✅ |
+| 17 | Searching for Files | [جستجو در فایل‌ها](./fa/chapters/ch17-searching-for-files.md) | [گەڕان لە فایلەکان](./ckb/chapters/ch17-searching-for-files.md) | ✅ |
+| 18 | Archiving and Backup | [آرشیو و پشتیبان‌گیری](./fa/chapters/ch18-archiving-and-backup.md) | [ئەرشیڤ و پشتیوانی](./ckb/chapters/ch18-archiving-and-backup.md) | ✅ |
+| 19 | Regular Expressions | [عبارات باقاعده](./fa/chapters/ch19-regular-expressions.md) | [دەقی ئایەتی](./ckb/chapters/ch19-regular-expressions.md) | ✅ |
+| 20 | Text Processing | [پردازش متن](./fa/chapters/ch20-text-processing.md) | [پرۆسێسکردنی دەق](./ckb/chapters/ch20-text-processing.md) | ✅ |
+| 21 | Formatting Output | [قالب‌بندی خروجی](./fa/chapters/ch21-formatting-output.md) | [فۆرماتکردنی ئاوتپوت](./ckb/chapters/ch21-formatting-output.md) | ✅ |
+| 22 | Printing | [چاپ](./fa/chapters/ch22-printing.md) | [چاپکردن](./ckb/chapters/ch22-printing.md) | ✅ |
+| 23 | Compiling Programs | [کامپایل کردن برنامه‌ها](./fa/chapters/ch23-compiling-programs.md) | [کۆمپایڵکردنی بەرنامەکان](./ckb/chapters/ch23-compiling-programs.md) | ✅ |
 
-> وضعیت: ✅ تکمیل (هر دو زبان) | ✅ FA فارسی تکمیل | 🔄 در حال ترجمه | ⬜ شروع نشده
+> وضعیت: ✅ تکمیل (هر دو زبان) | 🔄 در حال ترجمه | ⬜ شروع نشده
 
 ---
 
