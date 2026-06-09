@@ -7,11 +7,6 @@
 
 🌐 **[مشاهده‌ی آنلاین | بینینی ئۆنلاین](https://nonnoqteh.github.io/tlcl-translation/)**
 
-![وضعیت](https://img.shields.io/badge/وضعیت-کامل-3fb950?style=flat-square)
-![فصل‌ها](https://img.shields.io/badge/فصل‌ها-۳۶_فصل-58a6ff?style=flat-square)
-![زبان‌ها](https://img.shields.io/badge/زبان‌ها-فارسی_|_کوردی-bc8cff?style=flat-square)
-![لایسنس](https://img.shields.io/badge/لایسنس-CC_BY--NC--ND_3.0-ffa657?style=flat-square)
-
 </div>
 
 ---
