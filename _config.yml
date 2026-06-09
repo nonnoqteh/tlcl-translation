@@ -3,13 +3,6 @@ description: "ترجمه‌ی فارسی و کوردی-سورانی کتاب The
 baseurl: "/tlcl-translation"
 url: "https://nonnoqteh.github.io"
 
-theme: minima
-
-lang: fa
-
-author:
-  name: Nawid Dadwar
-
 markdown: kramdown
 highlighter: rouge
 
@@ -17,5 +10,14 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-plugins:
-  - jekyll-feed
+defaults:
+  - scope:
+      path: "fa/chapters"
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "ckb/chapters"
+      type: "pages"
+    values:
+      layout: "default"
