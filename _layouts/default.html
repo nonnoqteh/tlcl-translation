@@ -9,17 +9,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg:         #0d1117;
-      --surface:    #161b22;
-      --border:     #30363d;
-      --green:      #3fb950;
-      --blue:       #58a6ff;
-      --purple:     #bc8cff;
-      --orange:     #ffa657;
-      --red:        #f85149;
-      --yellow:     #d29922;
-      --text:       #e6edf3;
-      --text-muted: #8b949e;
+      --bg:          #0d1117;
+      --surface:     #161b22;
+      --border:      #30363d;
+      --green:       #3fb950;
+      --green-dim:   #1a4a27;
+      --blue:        #58a6ff;
+      --blue-light:  #79baff;
+      --purple:      #bc8cff;
+      --purple-light:#d0adff;
+      --orange:      #ffa657;
+      --red:         #f85149;
+      --yellow:      #d29922;
+      --text:        #e6edf3;
+      --text-muted:  #8b949e;
+      --text-dim:    #484f58;
+      --surface-hover:#1c2128;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -178,7 +183,7 @@
     }
 
     .content tr:nth-child(even) { background: var(--surface); }
-    .content tr:hover { background: #1c2128; }
+    .content tr:hover { background: var(--surface-hover); }
 
     /* ── Lists ── */
     .content ul, .content ol {
@@ -195,7 +200,7 @@
       border-radius: 0 8px 8px 0;
       padding: 14px 20px;
       margin: 20px 0;
-      color: #d1d5da;
+      color: var(--text);
       font-size: 14px;
     }
     .content blockquote p { margin: 0; }
@@ -276,6 +281,12 @@
       color: var(--green);
     }
 
+    button.nav-btn {
+      cursor: pointer;
+      font-family: 'Vazirmatn', sans-serif;
+      font-size: 14px;
+    }
+
     /* ── Scrollbar ── */
     ::-webkit-scrollbar { width: 8px; height: 8px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
@@ -321,8 +332,8 @@
   </div>
 
   <div class="chapter-nav">
-    <a class="nav-btn" href="javascript:history.back()">← بازگشت</a>
-    <a class="nav-btn home-btn" href="{{ site.baseurl }}/">🏠 فهرست فصل‌ها</a>
+    <button class="nav-btn" onclick="history.back()" aria-label="بازگشت به صفحه‌ی قبل">← بازگشت</button>
+    <a class="nav-btn home-btn" href="{{ site.baseurl }}/" aria-label="بازگشت به فهرست فصل‌ها">🏠 فهرست فصل‌ها</a>
   </div>
 </div>
 
