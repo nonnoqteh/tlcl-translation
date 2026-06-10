@@ -243,3 +243,5 @@ sudo make install
 ---
 
 *پایان پارت ۳*
+
+*فصل بعدی: [فصل ۲۴ — نوشتن اولین اسکریپت](ch24-writing-your-first-script)*
